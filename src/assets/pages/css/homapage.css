@@ -138,7 +138,7 @@ header {
 .hiring-banner h1 {
   font-size: 36px;
   margin-right: 10vw;
-  margin-bottom: 10px;
+  margin-bottom: 48px;
 }
 
 .join-button {
@@ -328,10 +328,12 @@ footer {
 }
 
 #line {
-  margin: auto 0;
+  position :absolute;
+  margin-left: 230px;
   height: 1px;
   width: 7vw;
   border: 1px solid black;
+  margin-top: 111px;
 }
 
 .vlines {
@@ -350,9 +352,11 @@ footer {
 .steps {
   display: flex;
   justify-content: center;
+  gap:108px;
 }
 
 .step .circle {
+
   width: 15vw;
   height: 15vw;
   display: flex;
@@ -714,3 +718,4 @@ footer {
     height: 300px;
   }
 }
+

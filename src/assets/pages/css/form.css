@@ -106,8 +106,8 @@
   
   .application-form {
     margin: 1vw;
-    background-color: rgba(255, 190, 93, 0.8);
-    border-radius: 20px;
+    background-color: rgba(255, 190, 93, 1) !important;
+    border-radius: 20px ;
     padding: 4vw 4vw;
     margin-top: 10px;
     text-align: center;
@@ -155,7 +155,7 @@
     border-radius: 10vw;
     border: none;
     background-color: #ffedd6;
-    width: 60%;
+    width: 100%;
     height: 60%;
   }
   
@@ -181,7 +181,7 @@
   .form-group label {
     flex: 1 1 100%;
     font-size: 1.8vw;
-    text-align: left;
+    
   }
   
   .form-group input[type="text"],
@@ -410,5 +410,151 @@
       padding: 2vw;
       border-radius: 20px;
       z-index: 1;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .custom-first-name input {
+      width: 60% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+    .custom-first-name label{
+      margin-right:56% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+  }
+
+  
+  @media (min-width: 992px) {
+    .custom-last-name input {
+      width: 60% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+    .custom-last-name label{
+      margin-right:69% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+  }
+
+
+  @media (min-width: 992px) {
+   
+    .custom-last-name label{
+      margin-right:69% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+  }
+  @media (max-width: 575px) {
+    .custom-first-name.col-12 label,
+    .custom-last-name.col-12 label {
+      margin-left: -82%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    
+    .custom-city-name.col-12 label {
+      margin-left: -87%;
+    }
+    .custom-city-name.col-12{
+      margin-top: 8%;
+    }
+  }
+  @media (min-width: 1024px) and (min-width: 1440px) {
+    .custom-city-name.col-lg-6 label {
+      margin-left: -87% !important;
+    }
+  }
+  @media (max-width: 575px) {
+    
+    .custom-pincode-name.col-12 label {
+      margin-left: -87%;
+    }
+   
+  }
+  @media (min-width: 1024px) {
+    
+    .custom-pincode-name.col-lg-6 label {
+      margin-left: -87%;
+    }
+   
+  }
+  @media (max-width: 575px) {
+    .custom-adu-name.col-12 label {
+      margin-left: -74%;
+    }
+  }
+  @media (min-width: 1024px) {
+    
+    .custom-adu-name.col-lg-6 label {
+      margin-left: -54%;
+    }
+   
+  }
+  @media (max-width: 575px) {
+    .custom-pan-name.col-12 label {
+      margin-left: -74%;
+    }
+    .custom-pan-name.col-12{
+      margin-top: 0% !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    
+    .custom-pan-name.col-lg-6  {
+      margin-top: -0px !important;
+    }
+
+    .custom-pan-name.col-lg-6 label {
+      margin-left: -54%;
+    }
+  }
+  @media (max-width: 575px) {
+    .custom-adress-name.col-12 label
+    {
+      margin-left: -84%;
+    }
+    .custom-adress-name.col-12 input
+    {
+      margin-left: 0% !important;
+      width:100% !important;
+      height: 120% !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .custom-adress-name.col-lg-12 input {
+      /* Your custom styles for laptop screens */
+     margin-left: 0% !important;
+     width: 94% !important;
+     height: 65% !important;
+      /* Add any other styles you need */
+    }
+    .custom-adress-name.col-lg-12 label {
+      /* Your custom styles for laptop screens */
+     margin-left: -90% !important;
+     
+      /* Add any other styles you need */
+    }
+  }
+  @media (min-width: 1024px) {
+    .custom-submit-name.col-lg-12  {
+     width: 12% !important;
+     
+    }
+    .custom-submit-name.col-lg-12 button  {
+      width: 73% !important;
+      height: 121% !important;
+      margin-left: 456% !important;
+      border-radius: 20px !important;
+      
+     }
+    
+  }
+
+  @media (max-width: 575px) {
+    .custom-submit-name.col-lg-12 button
+    {
+      border-radius: 20px !important;
+      width: 54% !important;
     }
   }

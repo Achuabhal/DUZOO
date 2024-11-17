@@ -1,6 +1,9 @@
 import React from 'react';
 import './css/homapage.css';
 import { Link } from 'react-router-dom';
+import logo from '../images/duzo.png';
+import Language from '../images/language.png';
+import cover from "../images/cover.jpg"
 
 
 
@@ -20,7 +23,7 @@ const HiringPage: React.FC = () => {
       <header>
         <div className="navbar">
           <div className="logo">
-            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <nav>
             <a href="#join-steps">How To Join</a>
@@ -36,7 +39,7 @@ const HiringPage: React.FC = () => {
               </button>
             </label>
             <span className="lang-icon">
-              <img src="../../images/language.png" alt="Language" />
+              <img src={Language} alt="Language" /> 
             </span>
             <span className="cart-icon">
               <img src="../../images/user.png" alt="User" />
@@ -54,7 +57,7 @@ const HiringPage: React.FC = () => {
       </header>
 
       <main>
-        <section className="hiring-banner">
+        <section className="hiring-banner" style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <h1>WE ARE HIRING</h1>
           <button className="join-button">Join Us</button>
         </section>
@@ -111,8 +114,9 @@ const HiringPage: React.FC = () => {
         <div className="steps">
           {['Apply Online', 'Learn', 'Give a test', 'Start Earning'].map((step, index) => (
             <div className="step" key={index}>
-              <div className={`circle ${step === 'Start Earning' ? 'green-circle' : 'black-circle'}`}>{step}</div>
               {index < 3 && <div id="line"></div>}
+              <div className={`circle ${step === 'Start Earning' ? 'green-circle' : 'black-circle'}`}>{step}</div>
+              
             </div>
           ))}
         </div>
@@ -122,11 +126,11 @@ const HiringPage: React.FC = () => {
         <h2>How It Works</h2>
         <div className="how-it-works-content">
           <div className="steps-description">
-            <p>Download The App</p>
+            <p style={{ marginLeft: '107px' }}>Download The App</p>
             <div className="arrow">↓</div>
             <p>Work At Your Convenient Time</p>
             <div className="arrow">↓</div>
-            <p>Earn</p>
+            <p style={{ marginLeft: '186px' }}>Earn</p>
           </div>
           <div className="app-image-placeholder"></div>
         </div>
@@ -135,7 +139,7 @@ const HiringPage: React.FC = () => {
       <div className="contact">
         <div className="site-map">
           <div className="mobile-logo">
-            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <p>Site Map</p>
           <a href="#">Services</a>
