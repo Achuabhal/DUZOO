@@ -3,6 +3,7 @@ import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Preloader from '../component/Preloader'; // Assuming Preloader is in the same folder
 import { Link } from 'react-router-dom';
+import logo from '../images/duzo.png';
 
 export default function Component() {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -33,17 +34,14 @@ export default function Component() {
   }
 
   return (
-    <Container fluid className="p-0 m-0" style={{ height: '100vh', width: '100vw', backgroundColor: '#FFE6D0' }}>
+    <Container fluid className="p-0 m-0" style={{ height: '100vh', width: '100vw', backgroundColor: '#FFEBCC' }}> 
       <div className="d-flex flex-column align-items-center justify-content-center h-100">
-        <div className="text-center mb-4">
-          <h1 style={{ 
-            fontSize: '2.5rem', 
-            fontWeight: 'bold',
-            color: '#000'
-          }}>
-            <span style={{ color: '#FF6B00' }}>DU</span>
-            ZO
-          </h1>
+        <div className="text-center ">
+          <img 
+            src={logo}
+            alt="Logo" 
+            style={{ width: '162px', height: '105px' }} 
+          />
         </div>
 
         <div style={{ width: '100%', maxWidth: '400px', padding: '0 15px' }}>
@@ -58,7 +56,7 @@ export default function Component() {
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 style={{
                   border: '1px solid #DDD',
-                  borderRadius: '4px',
+                  borderRadius: '20px', // Make the input curved
                   padding: '0.5rem'
                 }}
               />
@@ -72,29 +70,29 @@ export default function Component() {
                 onChange={(e) => setOtp(e.target.value)}
                 style={{
                   border: '1px solid #DDD',
-                  borderRadius: '4px',
+                  borderRadius: '20px', // Make the input curved
                   padding: '0.5rem'
                 }}
               />
             </Form.Group>
 
             <Link to="/homepage" className="action">
-             
+            <div style={{ marginLeft: '124px' }}>
+                <Button 
+                type="submit"
+                className="w-50" // Added margin-left using Bootstrap class
+                style={{
+                  backgroundColor: '#000',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '0.5rem',
+                  fontSize: '1rem',
                  
-
-            <Button 
-              type="submit"
-              className="w-100"
-              style={{
-                backgroundColor: '#000',
-                border: 'none',
-                borderRadius: '20px',
-                padding: '0.5rem',
-                fontSize: '1rem'
-              }}
-            >
-              Submit
-            </Button>
+                }}
+                >
+                Submit
+                </Button>
+                </div>
             </Link>
           </Form>
         </div>

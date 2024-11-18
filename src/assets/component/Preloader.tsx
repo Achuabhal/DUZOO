@@ -12,7 +12,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
   useEffect(() => {
     // Set background color when the component mounts
-    document.body.style.backgroundColor = '#FFE6D0';
+    document.body.style.backgroundColor = '#FFEBCC'; 
+
 
     // Cleanup to reset background color when the component unmounts
     return () => {
@@ -55,16 +56,17 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }
       
       .progress-bar {
-        width: 100px;
-        height: 10px;
-        background-color: #FFD5B5;
+        width: 200px;  /* Increased width */
+        height: 15px;  /* Increased height */
+        background-color:#FFEBCC; 
         border-radius: 50px;
         overflow: hidden;
       }
 
       .progress-bar-fill {
         height: 100%;
-        background-color: #FF6B35;
+        background-color: #FFBE5D;
+
         border-radius: 50px;
         transition: width 0.5s ease-out;
       }
@@ -85,12 +87,12 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }
 
       .logo {
-        width: 200px;
-        height: 128px;
+        width: 200px;  /* Original size */
+        height: 128px; /* Original size */
       }
 
       .loading-text {
-        font-size: 18px;
+        font-size: 18px; /* Original size */
         animation: pulse 1s infinite;
       }
 

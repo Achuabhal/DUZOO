@@ -6,6 +6,15 @@ import Language from '../images/language.png';
 import cover from "../images/cover.jpg"
 
 
+const routes: string[] = [
+  '/Atomobile',
+  '/homecleaning',
+  '/applicationrepair',
+  '/chef',
+  '/beauty',
+  '/electronic'
+];
+
 
 const HiringPage: React.FC = () => {
   const toggleDropdown = () => {
@@ -72,9 +81,9 @@ const HiringPage: React.FC = () => {
                 <div className="expertise-card" key={index}>
                   <div className="icon-placeholder"></div>
                   <p>{expertise}</p>
-                  <Link to="/Atomobile" className="action">
-                  <button>Apply</button>
-                  </Link>
+                  <Link to={routes[index]} className="action">
+            <button>Apply</button>
+          </Link>
                 </div>
               ))}
             </div>

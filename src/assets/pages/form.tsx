@@ -56,7 +56,7 @@ const App: React.FC = () => {
             <hr style={{ width: '70%', marginBottom: '4vw' }} />
             <div className="form-group">
               <div className="row">
-                <div className="col-12 col-sm-6  col-md-4 custom-first-name">
+                <div className="col-12 col-sm-6  col-md-4 col-lg-6 custom-first-name">
                   <label >*First Name</label>
                   <input id="fname" type="text" name="firstName" className="form-control" required />
                 </div>
@@ -66,7 +66,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-12 col-sm-6 custom-last-name">
+                <div className="col-12 col-sm-6 col-lg-6 custom-email-name">
                   <label>*E-mail Address</label>
                   <input id="mail" type="email" name="email" className="form-control" required />
                 </div>
@@ -156,7 +156,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <footer className="bg-dark text-white text-center p-3">
+      <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902' }}>
         <p>&copy; 2024 by DUZO</p>
       </footer>
     </div>

@@ -419,7 +419,7 @@
      ;  /* Force centering */
     }
     .custom-first-name label{
-      margin-right:56% !important;  /* Force the width to 80% */
+      margin-right:71% !important;  /* Force the width to 80% */
      ;  /* Force centering */
     }
   }
@@ -448,6 +448,23 @@
     .custom-first-name.col-12 label,
     .custom-last-name.col-12 label {
       margin-left: -82%;
+    }
+  }
+  @media (min-width: 992px) {
+    .custom-email-name input {
+      width: 74% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+    .custom-email-name label{
+      margin-right:64% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+  }
+  @media (max-width: 575px) {
+   
+    .custom-email-name label{
+      margin-right:77% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
     }
   }
   
