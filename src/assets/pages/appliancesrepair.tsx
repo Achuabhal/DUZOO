@@ -1,54 +1,73 @@
-import React, { useState } from "react";
-import "./css/application.module.css";
+import React, { useState } from 'react';
+import './css/automobile.module.css';
 import { Link } from 'react-router-dom';
 
-const RepairCard: React.FC = () => {
-  const [serviceCount, setServiceCount] = useState<number>(0);
 
-  const handleServiceSelect = () => {
-    setServiceCount(serviceCount + 1);
+const AutomobileCleaning: React.FC = () => {
+  const [selectedCount, setSelectedCount] = useState<number>(0);
+  const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]); // Store selected service IDs
+
+  const handleServiceClick = (serviceId: number) => {
+    if (selectedServiceIds.includes(serviceId)) {
+      // If the service is already selected, deselect it
+      setSelectedServiceIds(prevIds => prevIds.filter(id => id !== serviceId));
+      setSelectedCount(prevCount => prevCount - 1);
+    } else if (selectedCount < 2) {
+      // If the service isn't selected and there are fewer than 2 selected services, select it
+      setSelectedServiceIds(prevIds => [...prevIds, serviceId]);
+      setSelectedCount(prevCount => prevCount + 1);
+    }
   };
 
-  const handleClose = () => {
-    console.log("Close button clicked");
+  const handleCloseButtonClick = () => {
+    // Handle the close button functionality here, if required
   };
 
   return (
     <div className="container">
-      <div className="repair-card">
-        <button className="close-btn" aria-label="Close" onClick={handleClose}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+      <div className="header">
+        <h1>Application Repair</h1>
+        <Link to="/homepage">
+        <button id="closeButton" className="close-button" onClick={handleCloseButtonClick}>
+          ✕
         </button>
-        <h2>Appliances Repair</h2>
-        <p>Select your expertise</p>
-        <div className="service-grid">
-          {/* Example service button */}
-          <button onClick={handleServiceSelect}>Service 1</button>
-          <button onClick={handleServiceSelect}>Service 2</button>
-          {/* Dynamically insert additional service buttons */}
+        </Link>
+      </div>
+      <p className="subheader">Select your expertise</p>
+      <div className="services-grid">
+        <div
+          className={`service-item ${selectedServiceIds.includes(1) ? 'selected' : ''}`}
+          data-id="1"
+          onClick={() => handleServiceClick(1)}
+        >
+          <div className="service-box">
+            <img src="path/to/car-cleaning-image.jpg" alt="Car Cleaning" />
+          </div>
+          <span className="service-name">Car Cleaning</span>
         </div>
-        <div className="footer">
-          <p className="service-count">Service selected: {serviceCount}</p>
-            <Link to="/Form" >
-          <button className="proceed-btn">Proceed to apply</button>
-          </Link>
+        <div
+          className={`service-item ${selectedServiceIds.includes(2) ? 'selected' : ''}`}
+          data-id="2"
+          onClick={() => handleServiceClick(2)}
+        >
+          <div className="service-box">
+            <img src="path/to/bike-cleaning-image.jpg" alt="Bike Cleaning" />
+          </div>
+          <span className="service-name">Bike Cleaning</span>
         </div>
       </div>
+      <p className="service-count">
+        Service selected: <span id="selectedCount">{selectedCount}</span>
+      </p>
+      <Link to="/Form" className="action">
+                  
+                 
+      <button id="proceedButton" className="proceed-button">
+        Proceed to apply
+      </button>
+      </Link> 
     </div>
   );
 };
 
-export default RepairCard;
+export default AutomobileCleaning;

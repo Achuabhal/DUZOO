@@ -126,3 +126,15 @@ body {
       border-radius: 12px;
     }
   }
+
+  .service-item {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  
+  .service-item.selected {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Black shadow */
+    transform: scale(1.05); /* Optional: Slightly enlarges the button */
+  }
+  

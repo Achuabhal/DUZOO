@@ -1,28 +1,32 @@
 import React, { useState } from 'react';
-import './css/slot.css';
+import styles from './css/SlotConfirmation.module.css'; // Import the module CSS
 import { Link } from 'react-router-dom';
+
 const SlotConfirmation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
 
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  
 
   return (
     <>
       {isOpen && (
-        <div className="confirmation-box">
-
-          <div className="close-btn">✕</div>
-          <div className="content">
-            <h2>Your Slot is confirmed 🎉</h2>
-            <div className="details">
-              <h3>Details</h3>
-              <p>Location -</p>
-              <p>Date -</p>
-              <p>Timing -</p>
+        <div className={styles.container}>
+          <div className={styles.confirmationBox}>
+            <Link to="/you">
+            <div className={styles.closeBtn}>
+              ✕
             </div>
-            <p className="wishes">All The Best 😊</p>
+            </Link>
+            <div className={styles.content}>
+              <h2 className={styles.heading}>Your Slot is confirmed 🎉</h2>
+              <div className={styles.details}>
+                <h3 className={styles.detailsHeading}>Details</h3>
+                <p className={styles.detailsText}>Location -</p>
+                <p className={styles.detailsText}>Date -</p>
+                <p className={styles.detailsText}>Timing -</p>
+              </div>
+              <p className={styles.wishes}>All The Best 😊</p>
+            </div>
           </div>
         </div>
       )}
