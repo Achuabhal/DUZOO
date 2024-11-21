@@ -9,6 +9,8 @@ import APPLICATION from "./assets/pages/appliancesrepair"
 import BEAUTY from "./assets/pages/beauty"
 import Chef from "./assets/pages/chef"
 import Electronic from "./assets/pages/electronics"
+import Slot from "./assets/pages/SlotConfirmation"
+import Thank from "./assets/pages/ThankYou"
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
         <Route path="/beauty" element={<BEAUTY />} />
         <Route path="/chef" element={< Chef/>} />
         <Route path="/electronic" element={<Electronic />} />
+        <Route path="/slot" element={<Slot/>} />
+        <Route path="/you" element={<Thank />} />
+        
 
       </Routes>
     </Router>

@@ -135,11 +135,11 @@ const HiringPage: React.FC = () => {
         <h2>How It Works</h2>
         <div className="how-it-works-content">
           <div className="steps-description">
-            <p style={{ marginLeft: '107px' }}>Download The App</p>
+            <p >Download The App</p>
             <div className="arrow">↓</div>
             <p>Work At Your Convenient Time</p>
             <div className="arrow">↓</div>
-            <p style={{ marginLeft: '186px' }}>Earn</p>
+            <p >Earn</p>
           </div>
           <div className="app-image-placeholder"></div>
         </div>

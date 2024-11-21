@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './css/form.css';
 import cover from '../images/cover2.jpg';
 import logo from "../images/duzo.png";
+import { Link } from 'react-router-dom';
 
 const App: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -129,7 +130,11 @@ const App: React.FC = () => {
             
               <div className="row">
               <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
+              <Link to="/slot">
+        
+       
                   <button type="submit" className="btn btn-dark w-100">Submit</button>
+                  </Link>
                 </div>
               </div>
               </div>
@@ -141,7 +146,7 @@ const App: React.FC = () => {
       <div className="contact">
         <div className="site-map">
           <div className="mobile-logo">
-            <img src="images/WhatsApp_Image_2024-09-25_at_21.12.00_b71b0b4a-removebg-preview.png" alt="Mobile Logo" className="img-fluid" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <p>Site Map</p>
           <a href="#">Services</a>
@@ -150,9 +155,31 @@ const App: React.FC = () => {
           <a href="#">About Us</a>
           <a href="#">Contact Us</a>
         </div>
+
         <div className="app-download">
-          <p>Download The App</p>
-          <a style={{ color: 'black' }} href="#">Link</a>
+          <div>
+            <p>Download The App</p>
+            <a style={{ color: 'black' }} href="#">Link</a>
+          </div>
+          <div className="social-media">
+            <p>Follow Us On</p>
+            {/* Social media icons */}
+          </div>
+        </div>
+
+        <div className="contact-info">
+          <div className="logo">
+            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+          </div>
+          <p>
+            {/* Phone icon */}
+            Phone number
+          </p>
+          <p>
+            {/* Email icon */}
+            E-mail address
+          </p>
+          <button className="book-now-button">BOOK NOW</button>
         </div>
       </div>
 

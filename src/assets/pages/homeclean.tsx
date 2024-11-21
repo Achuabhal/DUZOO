@@ -49,9 +49,11 @@ const HomeCleaning: React.FC = () => {
     <div className="container">
       <div className="header">
         <h1>Home Cleaning</h1>
+        <Link to="/homepage">
         <button id="closeButton" className="close-button" onClick={handleClose}>
           ✕
         </button>
+        </Link>
       </div>
       <p className="subheader">Select your expertise</p>
       <div className="services-grid">

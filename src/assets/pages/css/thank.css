@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .confirmation-box {
+    background-color: #ffe4b5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .content {
+    margin-top: 15px;
+  }
+  
+  h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .details {
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .details h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+  
+  .details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .wishes {
+    margin: 20px 0 0 0;
+    font-size: 16px;
+  }

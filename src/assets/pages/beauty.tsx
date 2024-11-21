@@ -40,9 +40,11 @@ const BeautySalon: React.FC = () => {
     <div className="container">
       <div className="header">
         <h1>Beauty and Salon</h1>
+        <Link to="/homepage">
         <button id="closeButton" className="close-button" onClick={closeHandler}>
           ✕
         </button>
+        </Link>
       </div>
       <p className="subheader">Select your expertise</p>
       <div className="services-grid">

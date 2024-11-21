@@ -1,15 +1,15 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Salsa", cursive;
-  }
+
+  
   
   body {
+    display: block !important; /* Override flexbox styling */
+    display: flex;
+    justify-content: initial !important;
+    align-items: initial !important;
+    min-height: initial !important;
     background-color: #ffffff;
     color: #333;
-  }
+}
   
   header {
     background-color: #ffe3b3;
@@ -87,15 +87,19 @@
   }
   
   .banner h1 {
-    font-size: 2.5vw;
-    margin-bottom: 5px;
+    font-size: 4.5vw;
+    margin-bottom: 27px;
     color: #000;
     font-weight: bold;
+    margin-left: 10%;
+    font-family: 'Salsa', cursive !important;
   }
   
   .banner p {
     font-size: 1.8vw;
     color: #000;
+    margin-right: 59%;
+    font-family: 'Salsa', cursive;
   }
   
   hr {
@@ -117,6 +121,7 @@
     font-size: 2.5vw;
     text-align: left;
     margin-bottom: 20px;
+    font-family: 'Salsa', cursive !important;
   }
   
   .application-form h3 {
@@ -124,6 +129,7 @@
     font-size: 2vw;
     margin-bottom: 20px;
     color: #333;
+    
   }
   
   #applyForm {

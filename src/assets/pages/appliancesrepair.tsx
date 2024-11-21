@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/application.css";
+import "./css/application.module.css";
 import { Link } from 'react-router-dom';
 
 const RepairCard: React.FC = () => {

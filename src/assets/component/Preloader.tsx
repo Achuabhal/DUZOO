@@ -12,12 +12,11 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
   useEffect(() => {
     // Set background color when the component mounts
-    document.body.style.backgroundColor = '#FFEBCC'; 
-
+    document.body.style.backgroundColor = '#FFEBCC'; // Set background color to #FFE6D0
 
     // Cleanup to reset background color when the component unmounts
     return () => {
-      document.body.style.backgroundColor = ''; // Reset background color
+      document.body.style.backgroundColor = 'white'; // Reset background color
     };
   }, []); // Empty dependency array ensures it runs only once when the component mounts
 
@@ -56,17 +55,17 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }
       
       .progress-bar {
-        width: 200px;  /* Increased width */
-        height: 15px;  /* Increased height */
-        background-color:#FFEBCC; 
+        width: 100%;
+        max-width: 500px; /* You can adjust the max-width to fit your design */
+        height: 10px;
+        background-color: #FFD5B5;
         border-radius: 50px;
         overflow: hidden;
       }
 
       .progress-bar-fill {
         height: 100%;
-        background-color: #FFBE5D;
-
+        background-color: #FF6B35;
         border-radius: 50px;
         transition: width 0.5s ease-out;
       }
@@ -75,8 +74,12 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        flex-direction: column;
+        width: 100%; /* Expand to 100% width */
+        height: 100vh; /* Take up the full height of the viewport */
+        background-color: #FFEBCC; /* Set background to #FFE6D0 */
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .preloader-content {
@@ -87,13 +90,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }
 
       .logo {
-        width: 200px;  /* Original size */
-        height: 128px; /* Original size */
+        width: 200px;
+        height: 128px;
       }
 
       .loading-text {
-        font-size: 18px; /* Original size */
+        font-size: 18px;
         animation: pulse 1s infinite;
+        color: black; /* Set text color to white */
       }
 
       @keyframes pulse {
