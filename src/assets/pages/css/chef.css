@@ -10,11 +10,13 @@ body {
   }
   
   .container {
+    margin-top: 5%;
     width: 100%;
     max-width: 500px;
     background-color: #ffe3b3;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 10px; /* Added small curve */
   }
   
   .header {

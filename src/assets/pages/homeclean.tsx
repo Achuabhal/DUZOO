@@ -46,7 +46,7 @@ const HomeCleaning: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ width: "100%" }}>
       <div className="header">
         <h1>Home Cleaning</h1>
         <Link to="/homepage">

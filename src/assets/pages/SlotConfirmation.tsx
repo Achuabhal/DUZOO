@@ -18,7 +18,9 @@ const SlotConfirmation: React.FC = () => {
             </div>
             </Link>
             <div className={styles.content}>
-              <h2 className={styles.heading}>Your Slot is confirmed 🎉</h2>
+                <h2 className={styles.heading}><b>Your Slot is confirmed 🎉</b></h2>
+                <hr style={{ width: "50%", }} />
+
               <div className={styles.details}>
                 <h3 className={styles.detailsHeading}>Details</h3>
                 <p className={styles.detailsText}>Location -</p>

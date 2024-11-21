@@ -46,7 +46,7 @@ const App: React.FC = () => {
       <main>
         <section className="banner" style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover' }}>
           <h1>Apply</h1>
-          <p>Role Name &nbsp;&nbsp;&nbsp; Location</p>
+          <p className='a1'>Role Name &nbsp;&nbsp;&nbsp; Location</p>
         </section>
 
         <section className="application-form  p-4 my-4 rounded">
@@ -183,7 +183,9 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902' }}>
+      <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902', fontSize: '27px' }}>
+        
+
         <p>&copy; 2024 by DUZO</p>
       </footer>
     </div>

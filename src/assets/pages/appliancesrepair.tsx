@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './css/automobile.module.css';
 import { Link } from 'react-router-dom';
+import { useEffect} from 'react';
+
 
 
 const AutomobileCleaning: React.FC = () => {
@@ -24,6 +26,7 @@ const AutomobileCleaning: React.FC = () => {
   };
 
   return (
+    <div className="hi">
     <div className="container">
       <div className="header">
         <h1>Application Repair</h1>
@@ -66,6 +69,7 @@ const AutomobileCleaning: React.FC = () => {
         Proceed to apply
       </button>
       </Link> 
+    </div>
     </div>
   );
 };

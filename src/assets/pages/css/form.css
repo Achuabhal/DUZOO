@@ -95,12 +95,21 @@
     font-family: 'Salsa', cursive !important;
   }
   
-  .banner p {
+  .a1 {
     font-size: 1.8vw;
     color: #000;
     margin-right: 59%;
     font-family: 'Salsa', cursive;
   }
+  p.a1 {
+    margin-left: 10%;
+}
+p.a3{
+  margin-left: 180px;
+}
+p.a4{
+  margin-left: 80px;
+}
   
   hr {
     border: 1px solid rgb(122, 122, 122);
@@ -116,6 +125,7 @@
     margin-top: 10px;
     text-align: center;
   }
+  
   
   .application-form h2 {
     font-size: 2.5vw;
@@ -498,7 +508,7 @@
   @media (min-width: 1024px) {
     
     .custom-pincode-name.col-lg-6 label {
-      margin-left: -87%;
+      margin-left: -78%;
     }
    
   }
@@ -529,7 +539,7 @@
     }
 
     .custom-pan-name.col-lg-6 label {
-      margin-left: -54%;
+      margin-left: -60%;
     }
   }
   @media (max-width: 575px) {

@@ -43,15 +43,18 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      <div className="container-fluid" style={{ backgroundColor: '#FFBE5D', borderRadius: '15px', padding: '20px', width: '98%' }}>
+      <div className="container-fluid" style={{ backgroundColor: '#FFBE5D', borderRadius: '15px', padding: '100px', width: '98%'  }}>
       <h2 className="text-center mb-4" style={{ fontFamily: 'cursive' }}>Thank you for Applying</h2>
       <div className="row">
         <div className="col-md-6">
           <h4>Meet our Trainer</h4>
+          <hr style={{ width: "50%" }} />
+
           <div className="mb-3">
-            <label className="form-label">Location of Store</label>
+            <label className="form-label">Location of Store     -</label>
             <p>-</p>
           </div>
+          <div >
           <div className="mb-3">
             <label className="form-label">Select Date</label>
             <div className="d-flex">
@@ -59,6 +62,7 @@ const App: React.FC = () => {
               <input type="text" className="form-control me-2" placeholder="mm" style={{ width: '50px' }} />
               <input type="text" className="form-control" placeholder="yyyy" style={{ width: '70px' }} />
             </div>
+          </div>
           </div>
           <div className="mb-3">
             <label className="form-label">Timing <small>(Choose your slot)</small></label>
@@ -131,7 +135,9 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902' }}>
+      <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902', fontSize: '27px' }}>
+        
+
         <p>&copy; 2024 by DUZO</p>
       </footer>
     </div>
