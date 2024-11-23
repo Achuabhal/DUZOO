@@ -105,17 +105,16 @@ const HiringPage: React.FC = () => {
                 text: "Electrician, Carpenter...",
               },
             ].map(({ service, img, text }) => (
-                <div key={service} className="expertise-card" data-service={service} style={{ width: "100%", height: "100%" }}>
-                  <img src={img} alt={text} style={{ width: "150px", height: "150px" }} />
-                <p>{text}</p>
-                {/* Link with state to trigger modal */}
-                <Link
-                  to={`/${service}`}
-                  state={{ background: location }}
-                >
-                  <button className="apply-btn">Apply Now</button>
-                </Link>
-              </div>
+                <div key={service} className="col-12 col-md-6 col-lg-12 mb-4">
+                  <div className="expertise-card" data-service={service} style={{ width: "100%", height: "100%" }}>
+                    <img src={img} alt={text} className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                    <p>{text}</p>
+                    {/* Link with state to trigger modal */}
+                    <Link to={`/${service}`} state={{ background: location }}>
+                      <button className="apply-btn">Apply Now</button>
+                    </Link>
+                  </div>
+                </div>
             ))}
           </div>
         </div>
