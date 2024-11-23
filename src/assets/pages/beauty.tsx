@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/beuty.css";
 import { Link } from 'react-router-dom';
 
+
 const BeautySalon: React.FC = () => {
   const [selectedCount, setSelectedCount] = useState<number>(0);
   const [selectedServices, setSelectedServices] = useState<Set<number>>(new Set());

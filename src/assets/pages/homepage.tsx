@@ -1,35 +1,16 @@
-import React from 'react';
-import './css/homapage.css';
-import { Link } from 'react-router-dom';
-import logo from '../images/duzo.png';
-import Language from '../images/language.png';
-import cover from "../images/cover.jpg"
+import React from "react";
+import "./css/homapage.css";
+import Cover from '../images/cover.jpg';
+import { Link, useLocation } from "react-router-dom";
+import logo from "../images/duzo.png"
 
-
-const routes: string[] = [
-  '/Atomobile',
-  '/homecleaning',
-  '/applicationrepair',
-  '/chef',
-  '/beauty',
-  '/electronic'
-];
 
 
 const HiringPage: React.FC = () => {
-  const toggleDropdown = () => {
-    const dropdownContent = document.querySelector(".dropdown-content") as HTMLElement;
-    if (dropdownContent.style.display === "flex") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "flex";
-      dropdownContent.style.flexDirection = "column";
-    }
-  };
-
+  const location = useLocation();
   return (
-    <div>
-      <header>
+    <div  className="overflow-hidden">
+      <header >
         <div className="navbar">
           <div className="logo">
             <img src={logo} alt="DUZO Logo" />
@@ -38,7 +19,9 @@ const HiringPage: React.FC = () => {
             <a href="#join-steps">How To Join</a>
             <a href="#how-it-works">How It Works</a>
             <a href="../FAQ/faq.html">FAQ</a>
-            <a href="../Profile/profile.html" className="profile-button">Profile</a>
+            <a href="../Profile/profile.html" className="profile-button">
+              Profile
+            </a>
           </nav>
           <div className="icons">
             <label>
@@ -48,71 +31,113 @@ const HiringPage: React.FC = () => {
               </button>
             </label>
             <span className="lang-icon">
-              <img src={Language} alt="Language" /> 
+              <img src="../../images/language.png" alt="Language" />
             </span>
             <span className="cart-icon">
               <img src="../../images/user.png" alt="User" />
             </span>
             <div className="dropdown">
-              <div style={{ display: 'none' }} className="dropdown-content">
+              <div style={{ display: "none" }} className="dropdown-content">
                 <a href="../Profile/profile.html">Profile</a>
                 <a href="#">Language</a>
                 <a href="#">FAQ</a>
               </div>
             </div>
-            <button className="dropbtn" onClick={toggleDropdown}>☰</button>
+            <button className="dropbtn">☰</button>
           </div>
         </div>
       </header>
 
       <main>
-        <section className="hiring-banner" style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <h1>WE ARE HIRING</h1>
-          <button className="join-button">Join Us</button>
+      <div className="col-12 custom-wearehiring">
+        <section className="hiring-banner" style={{ backgroundImage: `url(${Cover})` }}>
+       <div>
+            <h1>WE ARE HIRING</h1>
+            <button className="join-button">Join Us</button>
+            </div>
         </section>
+        </div>
 
         <section className="expertise-section">
-          <div className="expertise-block">
-            <div className="expertise-grid">
-              <br />
-              <h2>Your Expertise</h2>
-              <br />
-              {['Automobile Cleaning', 'Home Cleaning', 'Appliances Repair', 'Chef Services', 'Beauty and Salon', 'Electrician, Carpenter...'].map((expertise, index) => (
-                <div className="expertise-card" key={index}>
-                  <div className="icon-placeholder"></div>
-                  <p>{expertise}</p>
-                  <Link to={routes[index]} className="action">
-            <button>Apply</button>
-          </Link>
-                </div>
-              ))}
-            </div>
-            <div className="ads_grid">
-              <div>
-                <div className="ads_60_animate"></div>
-                <div className="ads_40_animate"></div>
+      <div className="expertise-block">
+        <div className="expertise-space">
+          <h2>Your Expertise</h2>
+          <div className="expertise-grid">
+            {[
+              {
+                service: "Atomobile",
+                img: "../assets/images/auto.png",
+                text: "Automobile Cleaning",
+              },
+              {
+                service: "homecleaning",
+                img: "../assets/images/clean.png",
+                text: "Home Cleaning",
+              },
+              {
+                service: "applicationrepair",
+                img: "../assets/images/appliance.png",
+                text: "Appliances Repair",
+              },
+              {
+                service: "chef",
+                img: "../assets/images/chef.png",
+                text: "Chef Services",
+              },
+              {
+                service: "beauty",
+                img: "../assets/images/beauty.png",
+                text: "Beauty and Salon",
+              },
+              {
+                service: "electronic",
+                img: "../assets/images/epc.png",
+                text: "Electrician, Carpenter...",
+              },
+            ].map(({ service, img, text }) => (
+              <div key={service} className="expertise-card" data-service={service}>
+                <img src={img} alt={text} />
+                <p>{text}</p>
+                {/* Link with state to trigger modal */}
+                <Link
+                  to={`/${service}`}
+                  state={{ background: location }}
+                >
+                  <button className="apply-btn">Apply Now</button>
+                </Link>
               </div>
-              <div>
-                <div className="ads_40_animate"></div>
-                <div className="ads_60_animate"></div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+        <div className="ads_grid">
+          <div>
+            <div className="ads_60_animate"></div>
+            <div className="ads_40_animate"></div>
+          </div>
+          <div>
+            <div className="ads_40_animate"></div>
+            <div className="ads_60_animate"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
         <section className="positions-section">
           <h2>Open Positions</h2>
           <div className="positions-list">
-            {['Position Name', 'Position Name', 'Position Name'].map((position, index) => (
-              <div className="position-card" key={index}>
-                <div className="position-icon"></div>
-                <div className="position-info">
-                  <h3>{position}</h3>
-                  <p>Description</p>
+            {Array(3)
+              .fill(null)
+              .map((_, idx) => (
+                <div key={idx} className="position-card">
+                  <div className="position-icon"></div>
+                  <div className="position-info">
+                    <h3>Position Name</h3>
+                    <p>Description</p>
+                  </div>
+                  <button>Apply Now</button>
                 </div>
-                <button>Apply Now</button>
-              </div>
-            ))}
+              ))}
           </div>
           <button className="see-more-button">See More</button>
         </section>
@@ -121,12 +146,19 @@ const HiringPage: React.FC = () => {
       <section className="join-steps" id="join-steps">
         <h2>Join Us In Few Simple Steps</h2>
         <div className="steps">
-          {['Apply Online', 'Learn', 'Give a test', 'Start Earning'].map((step, index) => (
-            <div className="step" key={index}>
-              {index < 3 && <div id="line"></div>}
-              <div className={`circle ${step === 'Start Earning' ? 'green-circle' : 'black-circle'}`}>{step}</div>
-              
-            </div>
+          {[
+            { step: "Apply Online", color: "black-circle" },
+            { step: "Learn", color: "black-circle" },
+            { step: "Give a test", color: "black-circle" },
+            { step: "Start Earning", color: "green-circle" },
+          ].map(({ step, color }, idx) => (
+            <React.Fragment key={idx}>
+              <div className="step">
+                <div className={`${idx + 1} circle ${color}`}>{step}</div>
+                <div className="mobile_view_steps">{step}</div>
+              </div>
+              {idx < 3 && <div id="line"></div>}
+            </React.Fragment>
           ))}
         </div>
       </section>
@@ -135,11 +167,12 @@ const HiringPage: React.FC = () => {
         <h2>How It Works</h2>
         <div className="how-it-works-content">
           <div className="steps-description">
-            <p  className="a4">Download The App</p>
-            <div className="arrow">↓</div>
-            <p>Work At Your Convenient Time</p>
-            <div className="arrow">↓</div>
-            <p className="a3">Earn</p>
+            {["Download The App", "Work At Your Convenient Time", "Earn"].map((step, idx) => (
+              <React.Fragment key={idx}>
+                <p>{step}</p>
+                {idx < 2 && <div className="arrow">↓</div>}
+              </React.Fragment>
+            ))}
           </div>
           <div className="app-image-placeholder"></div>
         </div>
@@ -148,24 +181,28 @@ const HiringPage: React.FC = () => {
       <div className="contact">
         <div className="site-map">
           <div className="mobile-logo">
-            <img src={logo} alt="DUZO Logo" />
+            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
           </div>
           <p>Site Map</p>
-          <a href="#">Services</a>
-          <a href="#">Hiring</a>
-          <a href="#">For Business</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+          {["Services", "Hiring", "For Business", "About Us"].map((link, idx) => (
+            <a key={idx} href="#">
+              {link}
+            </a>
+          ))}
         </div>
 
-        <div className="app-download">
-          <div>
-            <p>Download The App</p>
-            <a style={{ color: 'black' }} href="#">Link</a>
-          </div>
-          <div className="social-media">
-            <p>Follow Us On</p>
-            {/* Social media icons */}
+        <div className="social-media-section">
+          <p>Follow Us On</p>
+          <div className="social-icons">
+            {[
+              { href: "https://www.instagram.com/duzopartners.in", icon: "fab fa-instagram" },
+              { href: "https://www.facebook.com", icon: "fab fa-facebook-f" },
+              { href: "https://www.youtube.com/@Duzoindia", icon: "fab fa-youtube" },
+            ].map(({ href, icon }, idx) => (
+              <a key={idx} href={href}>
+                <i className={icon}></i>
+              </a>
+            ))}
           </div>
         </div>
 
@@ -173,15 +210,8 @@ const HiringPage: React.FC = () => {
           <div className="logo">
             <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
           </div>
-          <p>
-            {/* Phone icon */}
-            Phone number
-          </p>
-          <p>
-            {/* Email icon */}
-            E-mail address
-          </p>
-          <button className="book-now-button">BOOK NOW</button>
+          <p>+917709466592</p>
+          <p>duzo.services@gmail.com</p>
         </div>
       </div>
 

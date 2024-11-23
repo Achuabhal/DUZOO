@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './css/automobile.module.css';
 import { Link } from 'react-router-dom';
-import { useEffect} from 'react';
 
 
 

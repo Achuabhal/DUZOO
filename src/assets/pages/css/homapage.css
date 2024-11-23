@@ -1,10 +1,15 @@
+/* General Styles */
+* {
+  font-family: "Salsa", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #ffffff !important;
   color: #333;
-  font-family: "Salsa", sans-serif !important;
 }
-
 
 header {
   background-color: #ffe3b3;
@@ -50,7 +55,7 @@ header {
   border: 1px solid #e76316;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   right: 10px;
-  top: 80px;
+  top: 130px;
   z-index: 1;
 }
 
@@ -117,32 +122,37 @@ header {
 }
 
 .hiring-banner {
+  display: flex;
+  align-items: center;
   background-image: url("../../images/banner1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
+  height: 25vw;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-left: 15vw;
   margin: 20px;
   border-radius: 25px;
 }
 
-.hiring-banner h1 {
-  font-size: 36px;
-  margin-right: 10vw;
-  margin-bottom: 48px;
+.hiring-banner div h1 {
+  font-size: 5vw;
+  margin-bottom: 10px;
+}
+
+.hiring-banner div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .join-button {
   padding: 10px 20px;
-  margin-left: 8vw;
-  width: 100px;
+  font-size: 3vw;
   background-color: #333;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 3vw;
   border: none;
   cursor: pointer;
 }
@@ -150,15 +160,20 @@ header {
 .expertise-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.expertise-block .expertise-space {
+  padding-right: 150px;
+}
+
 .expertise-section {
   background-color: rgba(255, 190, 93, 0.8);
-  padding: 20px;
+  padding: 60px;
   text-align: center;
   margin: 20px;
   border-radius: 25px;
@@ -219,16 +234,16 @@ header {
   margin: 10px;
   margin-bottom: 20px;
   background-color: #b8b8b8;
-  height: 240px;
-  width: 180px;
+  height: 280px;
+  width: 220px;
 }
 
 .ads_40_animate {
   margin: 10px;
   margin-bottom: 20px;
   background-color: #b8b8b8;
-  height: 180px;
-  width: 180px;
+  height: 220px;
+  width: 220px;
 }
 
 .positions-section {
@@ -323,12 +338,10 @@ footer {
 }
 
 #line {
-  position :absolute;
-  margin-left: 230px;
+  margin: auto 0;
   height: 1px;
   width: 7vw;
   border: 1px solid black;
-  margin-top: 111px;
 }
 
 .vlines {
@@ -347,11 +360,9 @@ footer {
 .steps {
   display: flex;
   justify-content: center;
-  gap:108px;
 }
 
 .step .circle {
-
   width: 15vw;
   height: 15vw;
   display: flex;
@@ -396,6 +407,10 @@ footer {
   padding: 0 20px;
 }
 
+.expertise-block div h2 {
+  text-align: center;
+}
+
 .steps-description {
   text-align: left;
   font-size: 2vw;
@@ -403,6 +418,7 @@ footer {
 }
 
 .steps-description p {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -513,12 +529,40 @@ footer {
 .join-stepss {
   display: none;
 }
+.join-steps .steps .step .mobile_view_steps {
+  display: none;
+}
+
+.social-media-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-media-section p {
+  font-size: 2vw;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Use Font Awesome or similar icon font */
+.social-icons a i {
+  font-size: 24px;
+}
 
 /* Mobile View */
 @media (max-width: 620px) {
-  .ads_grid {
-    display: none;
-  }
   .logo img {
     width: 40vw;
   }
@@ -528,30 +572,42 @@ footer {
   main .hiring-banner h1 {
     font-size: 7vw;
   }
-  main .hiring-banner .join-button {
+  main .hiring-banner div .join-button {
     padding: 5px 10px;
     font-size: 4vw;
-    margin-left: 15vw;
+  }
+  .expertise-section {
+    padding: 10px;
+  }
+  .expertise-card {
+    margin-bottom: 20px;
   }
   .expertise-section h2 {
     font-size: 1.8rem;
     text-align: center;
   }
   .expertise-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     padding: 0 10px;
   }
   .expertise-card .icon-placeholder {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .expertise-card p {
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.8rem;
   }
   .expertise-card button {
     padding: 4px 15px;
     font-size: 0.8rem;
+  }
+  .expertise-block {
+    padding: 0;
+  }
+  .expertise-block .expertise-space {
+    padding-right: 0;
   }
   .icons * {
     margin-right: 15px;
@@ -571,7 +627,7 @@ footer {
   .hiring-banner h1 {
     font-size: 24px;
   }
-  .hiring-banner button {
+  .hiring-banner div button {
     padding: 8px 15px;
     width: 80px;
     font-size: 14px;
@@ -613,6 +669,7 @@ footer {
     border-radius: 20px;
     text-align: center;
     padding: 5vw;
+    width: 100%;
   }
   .grid-made {
     display: flex;
@@ -620,14 +677,27 @@ footer {
     justify-content: center;
   }
   .steps {
+    margin: 0 20%;
     display: flex;
     flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
   }
   #line {
-    margin: 0 auto;
+    margin-left: 40px;
     width: 1px;
     height: 7vw;
     border: 1px solid black;
+  }
+  .step {
+    display: flex;
+  }
+  .join-steps .steps .step .mobile_view_steps {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    text-align: center;
   }
   .step .circle {
     width: 20vw;
@@ -641,11 +711,15 @@ footer {
     text-align: center;
     font-size: 3.2vw;
   }
+  .black-circle {
+    background-color: #000;
+  }
   .steps2 {
-    margin-left: 40px;
-    width: 20vw;
+    margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     font-size: 6vw;
   }
@@ -680,8 +754,7 @@ footer {
   .navbar nav,
   .icons .cart-icon,
   .icons label,
-  .join-steps,
-  .how-it-works,
+  .steps-description,
   .contact-info .logo img {
     display: none;
   }
@@ -695,6 +768,7 @@ footer {
   }
 
   .how-it-works-content {
+    align-items: center;
     flex-direction: column;
     gap: 30px;
   }
@@ -712,5 +786,61 @@ footer {
     width: 200px;
     height: 300px;
   }
+
+  .join-steps {
+    background-color: #ffbe5d;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin: 5px 0;
+  }
+
+  .black-circle {
+    background-color: black;
+  }
+
+  .green-circle {
+    background-color: #00ff00;
+  }
+
+  /* Hide desktop version */
+  .join-stepss {
+    display: none;
+  }
+
+  .social-media-section p {
+    font-size: 5vw;
+  }
+
+  .social-icons a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 1150px) {
+  .ads_grid {
+    display: none;
+  }
+  .expertise-block .expertise-space {
+    padding-right: 0;
+  }
 }
 
+@media (max-width: 575px) {
+  .custom-wearehiring.col-12 
+  {
+    width:109%;
+    margin-left: -15px !important;
+}
+}

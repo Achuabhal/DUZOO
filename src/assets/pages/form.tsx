@@ -130,7 +130,7 @@ const App: React.FC = () => {
             
               <div className="row">
               <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
-              <Link to="/slot">
+              <Link to="/you">
         
        
                   <button type="submit" className="btn btn-dark w-100">Submit</button>
@@ -169,7 +169,7 @@ const App: React.FC = () => {
 
         <div className="contact-info">
           <div className="logo">
-            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <p>
             {/* Phone icon */}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './css/automobile.module.css';
 import { Link } from 'react-router-dom';
-
+import bike from "../images/Images for hiring page/Automobile service/bike.png";
+import car from "../images/Images for hiring page/Automobile service/car-service.png";
 
 const AutomobileCleaning: React.FC = () => {
   const [selectedCount, setSelectedCount] = useState<number>(0);
@@ -41,7 +42,7 @@ const AutomobileCleaning: React.FC = () => {
           onClick={() => handleServiceClick(1)}
         >
           <div className="service-box">
-            <img src="path/to/car-cleaning-image.jpg" alt="Car Cleaning" />
+            <img src={car} alt="Car Cleaning" />
           </div>
           <span className="service-name">Car Cleaning</span>
         </div>
@@ -51,7 +52,7 @@ const AutomobileCleaning: React.FC = () => {
           onClick={() => handleServiceClick(2)}
         >
           <div className="service-box">
-            <img src="path/to/bike-cleaning-image.jpg" alt="Bike Cleaning" />
+            <img src={bike} alt="Bike Cleaning" />
           </div>
           <span className="service-name">Bike Cleaning</span>
         </div>
