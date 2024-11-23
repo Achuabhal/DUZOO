@@ -70,6 +70,7 @@ const HiringPage: React.FC = () => {
 
         <section className="expertise-section">
       <div className="expertise-block">
+        <div style={{ display: "flex" }}>
         <div className="expertise-space">
           <h2>Your Expertise</h2>
           <div className="expertise-grid">
@@ -118,6 +119,7 @@ const HiringPage: React.FC = () => {
             ))}
           </div>
         </div>
+      
         <div className="ads_grid">
           <div>
             <div className="ads_60_animate">
@@ -135,6 +137,7 @@ const HiringPage: React.FC = () => {
               <img src={pic3} alt="ads" style={{ width: "100%", height: "100%" }} />
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -83,7 +83,7 @@ const App: React.FC = () => {
               </div>
               <div className="row">
                 <div className="col-12 col-sm-6 col-lg-6 custom-city-name ">
-                  <label>*City</label>
+                    <label style={{ marginLeft: '-85%' }}>*City</label>
                   <input id="city" type="text" name="city" className="form-control" required />
                 </div>
                 <div className="col-12 col-sm-6 col-lg-6 custom-pincode-name">
@@ -122,8 +122,9 @@ const App: React.FC = () => {
                     </label>
                   </div>
                   <div className="col-12 col-md-12  ">
+                  <input type="checkbox" name="offlineTest" />
                     <label >*Offline Test will be conducted based on your role.</label>
-                    <input type="checkbox" name="offlineTest" />
+                   
                   </div>
                 </div>
               
