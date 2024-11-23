@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "./css/beuty.css";
 import { Link } from 'react-router-dom';
+import sw from "../images/Images for hiring page/Saloon/salon for women.png";
+import sw1 from "../images/Images for hiring page/Saloon/spa for women.png";
+import sw2 from "../images/Images for hiring page/Saloon/salon for men.png";
+import sw3 from "../images/Images for hiring page/Saloon/massage for men.png";
+
 
 
 const BeautySalon: React.FC = () => {
@@ -8,10 +13,10 @@ const BeautySalon: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<Set<number>>(new Set());
 
   const services = [
-    { id: 1, image: "path/to/salon-women-image.jpg", name: "Salon for women" },
-    { id: 2, image: "path/to/spa-women-image.jpg", name: "Spa for women" },
-    { id: 3, image: "path/to/salon-men-image.jpg", name: "Salon for men" },
-    { id: 4, image: "path/to/massage-men-image.jpg", name: "Massage for men" },
+    { id: 1, image: sw, name: "Salon for women" },
+    { id: 2, image: sw1, name: "Spa for women" },
+    { id: 3, image: sw2, name: "Salon for men" },
+    { id: 4, image: sw3, name: "Massage for men" },
   ];
 
   const toggleServiceSelection = (id: number) => {

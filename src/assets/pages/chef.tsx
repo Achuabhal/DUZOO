@@ -4,10 +4,33 @@ import { getFirestore } from "firebase/firestore";
 import firebaseConfig from "../../helper/firebaseConfig";
 import "./css/chef.css";
 import { Link } from "react-router-dom";
+import c from "../images/Images for hiring page/Chef and cook/cook for month.png"
+import c1 from "../images/Images for hiring page/Chef and cook/cook for one meal.png"
+import c2 from "../images/Images for hiring page/Chef and cook/cook for party.png"
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// Example services data
+const services = [
+  {
+    id: "1",
+    image: c,
+    name: "Cook for month",
+  },
+  {
+    id: "2",
+    image: c1,
+    name: "Japanese Cuisine",
+  },
+  {
+    id: "3",
+    image: c2,
+    name: "Indian Cuisine",
+  },
+];
 
 const App: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<Set<string>>(new Set());
@@ -37,29 +60,27 @@ const App: React.FC = () => {
       <div className="header">
         <h1>Chef Services</h1>
         <Link to="/homepage">
-     
-        <button id="closeButton" className="close-button" onClick={handleClose}>
-          ✕
-        </button>
-         
-      </Link>
+          <button id="closeButton" className="close-button" onClick={handleClose}>
+            ✕
+          </button>
+        </Link>
       </div>
       <p className="subheader">Select your expertise</p>
       <div className="services-grid">
-        {/* Example of multiple services */}
-        {["1", "2", "3"].map((id) => (
+        {/* Map through the services array */}
+        {services.map((service) => (
           <div
-            key={id}
+            key={service.id}
             className={`service-item ${
-              selectedServices.has(id) ? "selected" : ""
+              selectedServices.has(service.id) ? "selected" : ""
             }`}
-            data-id={id}
-            onClick={() => handleServiceClick(id)}
+            data-id={service.id}
+            onClick={() => handleServiceClick(service.id)}
           >
             <div className="service-box">
-              <img src="path/to/chef-image.jpg" alt="Chef Service" />
+              <img src={service.image} alt={service.name} />
             </div>
-            <span className="service-name">Chef Service {id}</span>
+            <span className="service-name">{service.name}</span>
           </div>
         ))}
       </div>
@@ -76,5 +97,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-  

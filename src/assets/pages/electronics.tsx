@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./css/electronic.css";
 import { Link } from 'react-router-dom';
+import e from "../images/Images for hiring page/Electrician,plumber and carpenter/electrician (1).png";
+import e1 from "../images/Images for hiring page/Electrician,plumber and carpenter/plumber (1).png";
+import e2 from "../images/Images for hiring page/Electrician,plumber and carpenter/carpenter.png";
+
 
 const App: React.FC = () => {
   const [selectedCount, setSelectedCount] = useState<number>(0);
@@ -9,9 +13,9 @@ const App: React.FC = () => {
   );
 
   const services = [
-    { id: 1, name: "Electrician", image: "path/to/electrician-image.jpg" },
-    { id: 2, name: "Plumber", image: "path/to/plumber-image.jpg" },
-    { id: 3, name: "Carpenter", image: "path/to/carpenter-image.jpg" },
+    { id: 1, name: "Electrician", image: e },
+    { id: 2, name: "Plumber", image: e1 },
+    { id: 3, name: "Carpenter", image: e2 },
   ];
 
   const toggleService = (id: number) => {

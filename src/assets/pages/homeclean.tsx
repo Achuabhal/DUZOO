@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "./css/homeclean.css";
 import { Link } from 'react-router-dom';
+import s from "../images/Images for hiring page/Home cleaning/sweeping.png"
+import m from "../images/Images for hiring page/Home cleaning/mop (1).png"
+import u from "../images/Images for hiring page/Home cleaning/clean-dishes.png"
+import w from "../images/Images for hiring page/Home cleaning/water-closet.png"
+import so from "../images/Images for hiring page/Home cleaning/sofa.png"
+import f from "../images/Images for hiring page/Home cleaning/cleaning.png"
+
 
 interface Service {
   id: number;
@@ -16,12 +23,12 @@ const HomeCleaning: React.FC = () => {
   );
 
   const services: Service[] = [
-    { id: 1, name: "Sweeping", imagePath: "path/to/sweeping-image.jpg", altText: "Sweeping" },
-    { id: 2, name: "Mopping", imagePath: "path/to/mopping-image.jpg", altText: "Mopping" },
-    { id: 3, name: "Utensil Cleaning", imagePath: "path/to/utensil-cleaning-image.jpg", altText: "Utensil Cleaning" },
-    { id: 4, name: "Washroom Cleaning", imagePath: "path/to/washroom-cleaning-image.jpg", altText: "Washroom Cleaning" },
-    { id: 5, name: "Sofa and Carpet Cleaning", imagePath: "path/to/sofa-carpet-cleaning-image.jpg", altText: "Sofa and Carpet Cleaning" },
-    { id: 6, name: "Full House Cleaning", imagePath: "path/to/full-house-cleaning-image.jpg", altText: "Full House Cleaning" },
+    { id: 1, name: "Sweeping", imagePath: s, altText: "Sweeping" },
+    { id: 2, name: "Mopping", imagePath: m, altText: "Mopping" },
+    { id: 3, name: "Utensil Cleaning", imagePath: u, altText: "Utensil Cleaning" },
+    { id: 4, name: "Washroom Cleaning", imagePath: w, altText: "Washroom Cleaning" },
+    { id: 5, name: "Sofa and Carpet Cleaning", imagePath: so, altText: "Sofa and Carpet Cleaning" },
+    { id: 6, name: "Full House Cleaning", imagePath: f, altText: "Full House Cleaning" },
   ];
 
   const toggleServiceSelection = (id: number) => {

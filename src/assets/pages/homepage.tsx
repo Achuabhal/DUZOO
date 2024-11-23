@@ -3,6 +3,16 @@ import "./css/homapage.css";
 import Cover from '../images/cover.jpg';
 import { Link, useLocation } from "react-router-dom";
 import logo from "../images/duzo.png"
+import pic from "../images/Images for hiring page/mainhire/Picsart_24-11-17_11-31-57-523-removebg-preview.png"
+import pic1 from "../images/Images for hiring page/mainhire/Picsart_24-11-17_17-40-48-844-removebg-preview.png"
+import pic2 from "../images/Images for hiring page/mainhire/Picsart_24-11-17_18-15-59-703-removebg-preview.png"
+import pic3 from "../images/Images for hiring page/mainhire/Picsart_24-11-17_18-17-26-327-removebg-preview.png"
+import img from "../images/Images for hiring page/mainhire/Hiring main page images/air-conditioner.png"
+import img1 from "../images/Images for hiring page/mainhire/Hiring main page images/automobile.png"
+import img2 from "../images/Images for hiring page/mainhire/Hiring main page images/chef.png"
+import img3 from "../images/Images for hiring page/mainhire/Hiring main page images/housekeeping.png"
+import img4 from "../images/Images for hiring page/mainhire/Hiring main page images/massage.png"
+import img5 from "../images/Images for hiring page/mainhire/Hiring main page images/repair-tools.png"
 
 
 
@@ -66,37 +76,37 @@ const HiringPage: React.FC = () => {
             {[
               {
                 service: "Atomobile",
-                img: "../assets/images/auto.png",
+                img: img1,
                 text: "Automobile Cleaning",
               },
               {
                 service: "homecleaning",
-                img: "../assets/images/clean.png",
+                img: img3,
                 text: "Home Cleaning",
               },
               {
                 service: "applicationrepair",
-                img: "../assets/images/appliance.png",
+                img: img,
                 text: "Appliances Repair",
               },
               {
                 service: "chef",
-                img: "../assets/images/chef.png",
+                img: img2,
                 text: "Chef Services",
               },
               {
                 service: "beauty",
-                img: "../assets/images/beauty.png",
+                img: img4,
                 text: "Beauty and Salon",
               },
               {
                 service: "electronic",
-                img: "../assets/images/epc.png",
+                img: img5,
                 text: "Electrician, Carpenter...",
               },
             ].map(({ service, img, text }) => (
-              <div key={service} className="expertise-card" data-service={service}>
-                <img src={img} alt={text} />
+                <div key={service} className="expertise-card" data-service={service} style={{ width: "100%", height: "100%" }}>
+                  <img src={img} alt={text} style={{ width: "150px", height: "150px" }} />
                 <p>{text}</p>
                 {/* Link with state to trigger modal */}
                 <Link
@@ -111,12 +121,20 @@ const HiringPage: React.FC = () => {
         </div>
         <div className="ads_grid">
           <div>
-            <div className="ads_60_animate"></div>
-            <div className="ads_40_animate"></div>
+            <div className="ads_60_animate">
+              <img src={pic} alt="ads" style={{ width: "100%", height: "100%" }} />
+            </div>
+            <div className="ads_40_animate">
+              <img src={pic1} alt="ads" style={{ width: "100%", height: "100%" }} />
+            </div>
           </div>
           <div>
-            <div className="ads_40_animate"></div>
-            <div className="ads_60_animate"></div>
+            <div className="ads_40_animate">
+              <img src={pic2} alt="ads" style={{ width: "100%", height: "100%" }} />
+            </div>
+            <div className="ads_60_animate">
+              <img src={pic3} alt="ads" style={{ width: "100%", height: "100%" }} />
+            </div>
           </div>
         </div>
       </div>
