@@ -839,11 +839,4 @@ footer {
   }
 }
 
-@media (max-width: 575px) {
-  .custom-wearehiring.col-12 
-  {
-    width:109%;
-    margin-left: -15px !important;
-}
-}
 
