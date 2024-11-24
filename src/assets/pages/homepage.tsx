@@ -53,7 +53,12 @@ const HiringPage: React.FC = () => {
                 <a href="#">FAQ</a>
               </div>
             </div>
-            <button className="dropbtn">☰</button>
+            <button className="dropbtn" onClick={() => {
+              const dropdownContent = document.querySelector(".dropdown-content") as HTMLElement;
+              if (dropdownContent) {
+                dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+              }
+            }}>☰</button>
           </div>
         </div>
       </header>
@@ -93,7 +98,7 @@ const HiringPage: React.FC = () => {
               {
                 service: "chef",
                 img: img2,
-                text: "Chef Services",
+                text: "Chef Services ",
               },
               {
                 service: "beauty",

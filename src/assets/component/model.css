@@ -14,7 +14,7 @@
 
 @media (max-width: 576px) {
   .container {
-    height: 100%;
+  
     width: 90%;
     max-height: 90%; /* Restrict height for the modal */
     overflow-y: auto; /* Enables vertical scrolling */
