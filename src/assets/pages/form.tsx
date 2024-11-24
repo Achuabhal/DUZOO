@@ -49,12 +49,12 @@ const App: React.FC = () => {
           <p className='a1'>Role Name &nbsp;&nbsp;&nbsp; Location</p>
         </section>
 
-        <section className="application-form  p-4 my-4 rounded">
+        <section className="application-form  p-4  rounded">
           <h2>Applying For Role Name</h2>
           <hr />
           <form id="applicationForm">
             <h3>General Details</h3>
-            <hr style={{ width: '70%', marginBottom: '4vw' }} />
+            <hr style={{ width: '70%', marginBottom: '1vw' }} />
             <div className="form-group">
               <div className="row">
                 <div className="col-12 col-sm-6  col-md-4 col-lg-6 custom-first-name">

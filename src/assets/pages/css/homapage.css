@@ -1,6 +1,6 @@
 /* General Styles */
 * {
-  font-family: "Salsa", sans-serif;
+  font-family: "Salsa";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -173,7 +173,7 @@ header {
 
 .expertise-section {
   background-color: rgba(255, 190, 93, 0.8);
-  padding: 60px;
+  padding: 34px;
   text-align: center;
   margin: 20px;
   border-radius: 25px;
@@ -189,7 +189,7 @@ header {
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 51px;
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
