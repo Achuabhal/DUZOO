@@ -14,6 +14,7 @@ import img3 from "../images/Images for hiring page/mainhire/Hiring main page ima
 import img4 from "../images/Images for hiring page/mainhire/Hiring main page images/massage.png"
 import img5 from "../images/Images for hiring page/mainhire/Hiring main page images/repair-tools.png"
 import { useEffect } from "react";
+import FAQ from "../component/faq"
 
 
 
@@ -208,6 +209,9 @@ const HiringPage: React.FC = () => {
           <div className="app-image-placeholder"></div>
         </div>
       </section>
+      <div>
+      <FAQ />
+    </div>
 
       <div className="contact">
         <div className="site-map">
