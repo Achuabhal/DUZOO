@@ -4,11 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   background-color: #ffffff !important;
-  color: #333;
+  color: #000000;
 }
 
 header {
@@ -186,6 +187,7 @@ color:#000;
   margin-bottom: 40px;
   text-align: left;
   padding-left: 20px;
+  color:#000;
 }
 
 .expertise-grid {
@@ -208,19 +210,19 @@ color:#000;
 .expertise-card .icon-placeholder {
   width: 150px;
   height: 150px;
-  background-color: #666;
+  background-color: #000000;
   border-radius: 25px;
 }
 
 .expertise-card p {
   font-size: 1rem;
-  color: #333;
+  color: #000000;
   margin: 5px 0;
 }
 
 .expertise-card button {
   padding: 5px 20px;
-  background-color: #333;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 15px;
@@ -298,14 +300,14 @@ color:#000;
 
 .position-info p {
   font-size: 2vw;
-  color: #666;
+  color: #000000;
 }
 
 .position-card button {
   padding: 8px 15px;
   margin-right: 2vw;
   font-size: 2vw;
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   border: none;
   border-radius: 2vw;
