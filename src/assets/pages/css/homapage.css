@@ -9,7 +9,7 @@
 
 body {
   background-color: #ffffff !important;
-  color: #000000;
+  color: #000000 !important;
 }
 
 header {
@@ -568,6 +568,9 @@ footer {
 
 /* Mobile View */
 @media (max-width: 620px) {
+  .allu{
+    padding: 0px 20px !important; 
+  }
   .logo img {
     width: 40vw;
   }

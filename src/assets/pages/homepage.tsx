@@ -26,7 +26,7 @@ const HiringPage: React.FC = () => {
   }, [location]);
   return (
     <div  className="overflow-hidden">
-      <header >
+      <header className="allu" >
         <div className="navbar">
           <div className="logo">
             <img src={logo} alt="DUZO Logo" />
