@@ -13,10 +13,10 @@ body {
 
 header {
   background-color: #ffe3b3;
-  padding: 30px 20px;
-  margin: 20px;
-  border-radius: 25px;
-}
+  padding: 20px 20px !important;
+  margin: 0 !important;
+  border-radius: 60px !important;
+}                         
 
 .logo img {
   width: 10vw;
@@ -137,6 +137,8 @@ header {
 .hiring-banner div h1 {
   font-size: 5vw;
   margin-bottom: 10px;
+  font-weight: 400;
+color:#000;
 }
 
 .hiring-banner div {
@@ -150,7 +152,7 @@ header {
 .join-button {
   padding: 1px 20px;
   font-size: 3vw;
-  background-color: #333;
+  background-color: #010101;
   color: #fff;
   border-radius: 3vw;
   border: none;

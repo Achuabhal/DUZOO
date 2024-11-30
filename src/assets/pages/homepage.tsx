@@ -13,11 +13,17 @@ import img2 from "../images/Images for hiring page/mainhire/Hiring main page ima
 import img3 from "../images/Images for hiring page/mainhire/Hiring main page images/housekeeping.png"
 import img4 from "../images/Images for hiring page/mainhire/Hiring main page images/massage.png"
 import img5 from "../images/Images for hiring page/mainhire/Hiring main page images/repair-tools.png"
+import { useEffect } from "react";
 
 
 
 const HiringPage: React.FC = () => {
   const location = useLocation();
+  
+  useEffect(() => {
+    // Scroll to the top of the page on location change
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <div  className="overflow-hidden">
       <header >
