@@ -10,7 +10,7 @@
   
   .location-selector-logo {
     position: relative;
-    margin-bottom: 30px;
+   
   }
   
   .location-selector-logo-text {
@@ -43,7 +43,7 @@
   .location-selector-header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #000000;
     font-size: 16px;
     font-weight: normal;
     letter-spacing: 1px;

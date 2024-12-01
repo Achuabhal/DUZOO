@@ -1,13 +1,14 @@
 import React from "react";
 import "./css/loc.css";
 import { Link } from 'react-router-dom';
-
+import logo from "../images/duzo.png"
 const LocationSelector: React.FC = () => {
   return (
     <div className="location-selector-body">
       <div className="location-selector-logo">
-        <div className="location-selector-logo-circle"></div>
-        <div className="location-selector-logo-text">DUZO</div>
+      <div style={{ marginTop: '40px', width: '162px', height: '105px', display: 'flex', justifyContent: 'center', alignItems: 'center',  }}>
+      <img src={logo} alt="Eligibility" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+      </div>
       </div>
       <div className="location-selector-card">
         <h1 className="location-selector-header">LOCATION</h1>
