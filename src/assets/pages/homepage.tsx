@@ -155,24 +155,7 @@ const HiringPage: React.FC = () => {
     </section>
 
 
-        <section className="positions-section">
-          <h2>Open Positions</h2>
-          <div className="positions-list">
-            {Array(3)
-              .fill(null)
-              .map((_, idx) => (
-                <div key={idx} className="position-card">
-                  <div className="position-icon"></div>
-                  <div className="position-info">
-                    <h3>Position Name</h3>
-                    <p>Description</p>
-                  </div>
-                  <button>Apply Now</button>
-                </div>
-              ))}
-          </div>
-          <button className="see-more-button">See More</button>
-        </section>
+       
       </main>
 
       <section className="join-steps" id="join-steps">
