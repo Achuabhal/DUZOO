@@ -13,6 +13,8 @@ import Slot from "./assets/pages/SlotConfirmation";
 import Thank from "./assets/pages/ThankYou";
 import Modal from "./assets/component/Modal"; // Ensure you have a reusable Modal component
 import ScrollToTop from "./assets/component/scroll";
+import AGE from "./assets/pages/age"
+import LOCATION from "./assets/pages/location"
 
 function App() {
   const location = useLocation();
@@ -25,10 +27,12 @@ function App() {
       
       {/* Main Routes */}
       <Routes location={background || location}>
-        <Route path="/" element={<Component />} />
+        <Route path="/login" element={<Component />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/you" element={<Thank />} />
         <Route path="/Form" element={<Form />} />
+        <Route path="/" element={<AGE />} />
+        <Route path="/loc" element={<LOCATION />} />
       </Routes>
 
       {/* Modal Routes */}

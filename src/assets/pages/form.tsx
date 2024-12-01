@@ -3,6 +3,7 @@ import './css/form.css';
 import cover from '../images/cover2.jpg';
 import logo from "../images/duzo.png";
 import { Link } from 'react-router-dom';
+import FAQ from "../component/faq"
 
 const App: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -143,6 +144,9 @@ const App: React.FC = () => {
           </form>
         </section>
       </main>
+      <div>
+      <FAQ />
+    </div>
 
       <div className="contact">
         <div className="site-map">

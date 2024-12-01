@@ -1,0 +1,123 @@
+.location-selector-body {
+    background-color: #FFEBCC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .location-selector-logo {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .location-selector-logo-text {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .location-selector-logo-circle {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: #ff6b35;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .location-selector-card {
+    background: white;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+  }
+  
+  .location-selector-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  
+  .location-selector-zone-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .location-selector-zone-subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .location-selector-select-container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .location-selector-select-zone {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #ffba7b;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 14px;
+  }
+  
+  .location-selector-select-zone option {
+    background-color: #ffba7b;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .location-selector-select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .location-selector-select-arrow::after {
+    content: "▼";
+    font-size: 12px;
+  }
+  
+  .location-selector-continue-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .location-selector-select-zone:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 186, 123, 0.5);
+  }
+  
+  .location-selector-select-zone:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
