@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './css/application.module.css';
 import { Link } from 'react-router-dom';
 
+
 const AutomobileCleaning: React.FC = () => {
   const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]);
 

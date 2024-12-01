@@ -82,7 +82,9 @@ const App: React.FC = () => {
           backgroundColor: '#FFBE5D',
           borderRadius: '15px',
           padding: '100px',
-          width: '98%'
+          width: '98%',
+          marginTop: '15px'
+        
         }}
         initial="hidden"
         animate="visible"

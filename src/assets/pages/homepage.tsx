@@ -216,7 +216,7 @@ const HiringPage: React.FC = () => {
       <div className="contact">
         <div className="site-map">
           <div className="mobile-logo">
-            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <p>Site Map</p>
           {["Services", "Hiring", "For Business", "About Us"].map((link, idx) => (
@@ -243,7 +243,7 @@ const HiringPage: React.FC = () => {
 
         <div className="contact-info">
           <div className="logo">
-            <img src="../../images/duzo_logo.png" alt="DUZO Logo" />
+            <img src={logo} alt="DUZO Logo" />
           </div>
           <p>+917709466592</p>
           <p>duzo.services@gmail.com</p>
