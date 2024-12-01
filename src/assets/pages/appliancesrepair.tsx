@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import './css/application.module.css';
 import { Link } from 'react-router-dom';
+import im1 from "../images/Images for hiring page/Appliances repair/air-conditioner.png";
+import im2 from "../images/Images for hiring page/Appliances repair/box.png";
+import im3 from "../images/Images for hiring page/Appliances repair/connection.png";
+import im5 from "../images/Images for hiring page/Appliances repair/dishwasher.png";
+import im6 from "../images/Images for hiring page/Appliances repair/food (1).png";
+import im7 from "../images/Images for hiring page/Appliances repair/induction-stove.png";
+import im8 from "../images/Images for hiring page/Appliances repair/mixer-blender.png";
+import im9 from "../images/Images for hiring page/Appliances repair/oven.png";
+import im10 from "../images/Images for hiring page/Appliances repair/refrigrator.png";
+import im11 from "../images/Images for hiring page/Appliances repair/smart-tv.png";
+import im12 from "../images/Images for hiring page/Appliances repair/stove (1).png";
+
+
 
 
 const AutomobileCleaning: React.FC = () => {
@@ -21,23 +34,21 @@ const AutomobileCleaning: React.FC = () => {
   };
 
   const services = [
-    { id: 3, name: 'Chimney Repair', img: 'path/to/chimney-repair-image.jpg' },
-    { id: 4, name: 'Water-purifier Repair', img: 'path/to/water-purifier-repair-image.jpg' },
-    { id: 5, name: 'Gas Stove Repair', img: 'path/to/gas-stove-repair-image.jpg' },
-    { id: 6, name: 'AC Repair', img: 'path/to/ac-repair-image.jpg' },
-    { id: 7, name: 'Washing Machine Repair', img: 'path/to/washing-machine-repair-image.jpg' },
-    { id: 8, name: 'Refrigerator Repair', img: 'path/to/refrigerator-repair-image.jpg' },
-    { id: 9, name: 'Fan Repair', img: 'path/to/fan-repair-image.jpg' },
-    { id: 10, name: 'Mixer Repair', img: 'path/to/mixer-repair-image.jpg' },
-    { id: 11, name: 'Microwave Repair', img: 'path/to/microwave-repair-image.jpg' },
-    { id: 12, name: 'Induction Repair', img: 'path/to/induction-repair-image.jpg' },
-    { id: 13, name: 'Geyser Repair', img: 'path/to/geyser-repair-image.jpg' },
-    { id: 14, name: 'TV Repair', img: 'path/to/tv-repair-image.jpg' },
-    { id: 15, name: 'Dishwasher Repair', img: 'path/to/dishwasher-repair-image.jpg' },
-    { id: 16, name: 'Inverter Repair', img: 'path/to/inverter-repair-image.jpg' },
-    { id: 17, name: 'Laptops and Mobiles Repair', img: 'path/to/laptops-mobiles-repair-image.jpg' },
-    { id: 18, name: 'Iron Repair', img: 'path/to/iron-repair-image.jpg' },
+    { id: 1, name: 'Air Condition', img: im1 },
+    { id: 2, name: 'Connection', img: im3 },
+    { id: 3, name: 'Dishwasher', img: im5 },
+    { id: 4, name: 'Food', img: im6 },
+    { id: 5, name: 'Induction Stove', img: im7 },
+    { id: 6, name: 'Mixer Blender', img: im8 },
+    { id: 7, name: 'Oven', img: im9 },
+    { id: 8, name: 'Refrigerator', img: im10 },
+    { id: 9, name: 'Smart TV', img: im11 },
+    { id: 10, name: 'Stove', img: im12 },
+    { id: 11, name: 'Iron repair', img: im2 },
+    { id: 12, name: 'Water Boiler', img: im3 },
+    { id: 13, name: 'Water Filter', img: im3 },
   ];
+  
 
   return (
     <div className="hi">
@@ -50,7 +61,6 @@ const AutomobileCleaning: React.FC = () => {
             </button>
           </Link>
         </div>
-        <p className="subheader">Select your expertise</p>
         <div className="services-grid">
           {services.map(service => (
             <div
