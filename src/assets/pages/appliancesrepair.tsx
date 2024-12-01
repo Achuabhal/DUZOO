@@ -1,74 +1,82 @@
 import React, { useState } from 'react';
-import './css/automobile.module.css';
+import './css/application.module.css';
 import { Link } from 'react-router-dom';
 
-
-
 const AutomobileCleaning: React.FC = () => {
-  const [selectedCount, setSelectedCount] = useState<number>(0);
-  const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]); // Store selected service IDs
+  const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]);
 
   const handleServiceClick = (serviceId: number) => {
     if (selectedServiceIds.includes(serviceId)) {
-      // If the service is already selected, deselect it
+      // Deselect the service if it is already selected
       setSelectedServiceIds(prevIds => prevIds.filter(id => id !== serviceId));
-      setSelectedCount(prevCount => prevCount - 1);
-    } else if (selectedCount < 2) {
-      // If the service isn't selected and there are fewer than 2 selected services, select it
+    } else {
+      // Select the service
       setSelectedServiceIds(prevIds => [...prevIds, serviceId]);
-      setSelectedCount(prevCount => prevCount + 1);
     }
   };
 
   const handleCloseButtonClick = () => {
-    // Handle the close button functionality here, if required
+    // Handle close button action
   };
+
+  const services = [
+    { id: 3, name: 'Chimney Repair', img: 'path/to/chimney-repair-image.jpg' },
+    { id: 4, name: 'Water-purifier Repair', img: 'path/to/water-purifier-repair-image.jpg' },
+    { id: 5, name: 'Gas Stove Repair', img: 'path/to/gas-stove-repair-image.jpg' },
+    { id: 6, name: 'AC Repair', img: 'path/to/ac-repair-image.jpg' },
+    { id: 7, name: 'Washing Machine Repair', img: 'path/to/washing-machine-repair-image.jpg' },
+    { id: 8, name: 'Refrigerator Repair', img: 'path/to/refrigerator-repair-image.jpg' },
+    { id: 9, name: 'Fan Repair', img: 'path/to/fan-repair-image.jpg' },
+    { id: 10, name: 'Mixer Repair', img: 'path/to/mixer-repair-image.jpg' },
+    { id: 11, name: 'Microwave Repair', img: 'path/to/microwave-repair-image.jpg' },
+    { id: 12, name: 'Induction Repair', img: 'path/to/induction-repair-image.jpg' },
+    { id: 13, name: 'Geyser Repair', img: 'path/to/geyser-repair-image.jpg' },
+    { id: 14, name: 'TV Repair', img: 'path/to/tv-repair-image.jpg' },
+    { id: 15, name: 'Dishwasher Repair', img: 'path/to/dishwasher-repair-image.jpg' },
+    { id: 16, name: 'Inverter Repair', img: 'path/to/inverter-repair-image.jpg' },
+    { id: 17, name: 'Laptops and Mobiles Repair', img: 'path/to/laptops-mobiles-repair-image.jpg' },
+    { id: 18, name: 'Iron Repair', img: 'path/to/iron-repair-image.jpg' },
+  ];
 
   return (
     <div className="hi">
-    <div className="container">
-      <div className="header">
-        <h1>Application Repair</h1>
-        <Link to="/homepage">
-        <button id="closeButton" className="close-button" onClick={handleCloseButtonClick}>
-          ✕
-        </button>
+      <div className="container">
+        <div className="header">
+          <h1>Application Repair</h1>
+          <Link to="/homepage">
+            <button id="closeButton" className="close-button" onClick={handleCloseButtonClick}>
+              ✕
+            </button>
+          </Link>
+        </div>
+        <p className="subheader">Select your expertise</p>
+        <div className="services-grid">
+          {services.map(service => (
+            <div
+              key={service.id}
+              className={`service-item ${selectedServiceIds.includes(service.id) ? 'selected' : ''}`}
+              onClick={() => handleServiceClick(service.id)}
+            >
+              <div className="service-box">
+                {service.img ? <img src={service.img} alt={service.name} /> : null}
+              </div>
+              <span className="service-name">{service.name}</span>
+            </div>
+          ))}
+        </div>
+        <p className="service-count">
+          Service selected: <span id="selectedCount">{selectedServiceIds.length}</span>
+        </p>
+        <Link to="/Form" className="action">
+          <button
+            id="proceedButton"
+            className="proceed-button"
+            disabled={selectedServiceIds.length === 0}
+          >
+            Proceed to apply
+          </button>
         </Link>
       </div>
-      <p className="subheader">Select your expertise</p>
-      <div className="services-grid">
-        <div
-          className={`service-item ${selectedServiceIds.includes(1) ? 'selected' : ''}`}
-          data-id="1"
-          onClick={() => handleServiceClick(1)}
-        >
-          <div className="service-box">
-            <img src="path/to/car-cleaning-image.jpg" alt="Car Cleaning" />
-          </div>
-          <span className="service-name">Car Cleaning</span>
-        </div>
-        <div
-          className={`service-item ${selectedServiceIds.includes(2) ? 'selected' : ''}`}
-          data-id="2"
-          onClick={() => handleServiceClick(2)}
-        >
-          <div className="service-box">
-            <img src="path/to/bike-cleaning-image.jpg" alt="Bike Cleaning" />
-          </div>
-          <span className="service-name">Bike Cleaning</span>
-        </div>
-      </div>
-      <p className="service-count">
-        Service selected: <span id="selectedCount">{selectedCount}</span>
-      </p>
-      <Link to="/Form" className="action">
-                  
-                 
-      <button id="proceedButton" className="proceed-button">
-        Proceed to apply
-      </button>
-      </Link> 
-    </div>
     </div>
   );
 };
