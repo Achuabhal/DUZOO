@@ -847,4 +847,24 @@ footer {
   }
 }
 
+@media (max-width: 620px){
+  .custom-contact.col-12 label
+  {
+    margin: 5px !important;
+  }
+}
 
+@media (max-width: 768px) { /* Target screens smaller than 768px */
+  .contact {
+    margin-left: 23px !important; /* Extra margin for mobile view */
+    width: 358px !important; /* Extra margin for mobile view */
+  }
+}
+
+@media (max-width: 768px) { /* Target screens smaller than 768px */
+  .footer {
+    width: 358px !important; /* Extra margin for mobile view */
+
+    margin-left: 23px;
+  }
+}
