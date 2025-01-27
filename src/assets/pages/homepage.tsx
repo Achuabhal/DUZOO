@@ -54,14 +54,14 @@ const HiringPage: React.FC = () => {
               <img src="../../images/user.png" alt="User" />
             </span>
             <div className="dropdown">
-              <div style={{ display: "none" }} className="dropdown-content">
+              <div style={{ display: "none" }} className="dropdown-contents">
                 <a href="../Profile/profile.html">Profile</a>
                 <a href="#">Language</a>
                 <a href="#">FAQ</a>
               </div>
             </div>
             <button className="dropbtn" onClick={() => {
-              const dropdownContent = document.querySelector(".dropdown-content") as HTMLElement;
+              const dropdownContent = document.querySelector(".dropdown-contents") as HTMLElement;
               if (dropdownContent) {
                 dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
               }
