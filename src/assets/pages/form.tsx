@@ -47,7 +47,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <header className="p-3 heder col-12 col-sm-6 col-md-12 col-lg-12">
+      <header className="heder col-12 col-sm-6 col-md-12 col-lg-12" style={{ width: '98%' }}>
         <div className="navbar d-flex justify-content-between align-items-center">
           <div className="logo d-flex align-items-center gap-3">
             <img src={logo} alt="Logo" className="img-fluid" />
