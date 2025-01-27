@@ -171,7 +171,7 @@ color:#000;
 }
 
 .expertise-block .expertise-space {
-  padding-right: 150px;
+  padding-right: 30px;
 }
 
 .expertise-section {
@@ -239,16 +239,17 @@ color:#000;
   margin: 10px;
   margin-bottom: 20px;
   background-color: #b8b8b8;
-  height: 280px;
-  width: 220px;
+  height: 300px;
+  width: 347px;
 }
+
 
 .ads_40_animate {
   margin: 10px;
   margin-bottom: 20px;
   background-color: #b8b8b8;
-  height: 220px;
-  width: 220px;
+  height: 282px;
+  width: 310px;
 }
 
 .positions-section {
@@ -856,14 +857,14 @@ footer {
 
 @media (max-width: 768px) { /* Target screens smaller than 768px */
   .contact {
-    margin-left: 23px !important; /* Extra margin for mobile view */
-    width: 358px !important; /* Extra margin for mobile view */
+    margin-left: 21px !important; /* Extra margin for mobile view */
+    width: 360px !important; /* Extra margin for mobile view */
   }
 }
 
 @media (max-width: 768px) { /* Target screens smaller than 768px */
   .footer {
-    width: 358px !important; /* Extra margin for mobile view */
+    width: 355px !important; /* Extra margin for mobile view */
 
     margin-left: 23px;
   }

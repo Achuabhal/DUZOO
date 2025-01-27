@@ -132,7 +132,7 @@ const HiringPage: React.FC = () => {
           </div>
         </div>
       
-        <div className="ads_grid" style={{ marginTop: "108px" }}>
+        <div className="ads_grid" style={{ marginTop: "100px" }}>
           <div>
             <div className="ads_60_animate">
               <img src={pic} alt="ads" style={{ width: "100%", height: "100%" }} />
