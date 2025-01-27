@@ -279,7 +279,7 @@ p.a4{
     font-weight: normal;
   }
   
-  .contact-info p {
+  .contact1-info p {
     font-size: 2vw;
   }
   
@@ -290,15 +290,15 @@ p.a4{
     margin: 5px 0;
   }
   
-  .contact-info div img {
+  .contact1-info div img {
     width: 15vw;
   }
   
-  .contact-info p svg {
+  .contact1-info p svg {
     width: 2vw;
   }
   
-  .contact-info .logo {
+  .contact1-info .logo {
     font-size: 24px;
     font-weight: bold;
   }
@@ -330,11 +330,11 @@ p.a4{
   
   .app-download,
   .social-media,
-  .contact-info {
+  .contact1-info {
     text-align: center;
   }
   
-  .contact {
+  .contact1 {
     font-weight: bold;
     display: flex;
     justify-content: space-around;
@@ -377,16 +377,16 @@ p.a4{
     .app-download .social-media span svg {
       width: 10vw;
     }
-    .contact-info p {
+    .contact1-info p {
       font-size: 5vw;
     }
-    .contact-info p svg {
+    .contact1-info p svg {
       width: 5vw;
     }
-    .contact-info .logo img {
+    .contact1-info .logo img {
       display: none;
     }
-    .contact {
+    .contact1 {
       display: block;
       margin-top: 10px;
     }
@@ -417,8 +417,8 @@ p.a4{
       font-size: 8vw;
     }
     .dropdown-content {
-      right: 10px;
-      top: 70px;
+      right: -11px;
+      top: 36px;
       display: block;
       position: absolute;
       background-color: #ffbe5d;
@@ -614,3 +614,75 @@ p.a4{
   }
 
   
+
+
+
+  .faq-container2 {
+    background-color: #f4b86c;
+    padding: 40px;
+    border-radius: 8px;
+    width: calc(100% - 40px); /* Adjust width to account for the 20px margin on both sides */
+    margin: 0 20px; /* Add 20px margin on left and right */
+}
+
+
+.faq-title2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 40px 0;
+    font-weight: normal;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.25rem;
+    color: black;
+    cursor: pointer;
+}
+
+.chevron {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.chevron::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding-left: 35px;
+    color: #333;
+}
+
+
+@media (max-width: 768px) { /* Target screens smaller than 768px */
+    .faq-container2 {
+      width: 389px !important; /* Extra margin for mobile view */
+  
+      margin-left: 5px;
+    }
+  }
+
+  @media (max-width: 768px) { /* Target screens smaller than 768px */
+    .heder {
+     border-radius: 16px !important;
+    }
+  }
