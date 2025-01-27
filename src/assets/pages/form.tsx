@@ -47,7 +47,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <header className="p-3 heder">
+      <header className="p-3 heder col-12 col-sm-6 col-md-12 col-lg-12">
         <div className="navbar d-flex justify-content-between align-items-center">
           <div className="logo d-flex align-items-center gap-3">
             <img src={logo} alt="Logo" className="img-fluid" />
@@ -177,7 +177,7 @@ const App: React.FC = () => {
           </form>
         </section>
       </main>
-      <div className="faq-container2">
+      <div className="faq-container2 col-12 col-sm-6 col-md-12 col-lg-12">
       <h1 className="faq-title2">Frequently Asked Questions (FAQ'S)</h1>
       {faqs.map((faq, index) => (
         <div key={index} className="faq-item">

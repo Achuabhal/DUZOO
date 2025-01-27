@@ -679,16 +679,19 @@ p.a4{
 }
 
 
-@media (max-width: 768px) { /* Target screens smaller than 768px */
-    .faq-container2 {
-      width: 391px !important; /* Extra margin for mobile view */
-  
-      margin-left: 5px;
-    }
+@media (max-width: 575px) {
+  .faq-container2.col-12 {
+ 
+    width: 98% !important;
+    margin-left: 5px;
   }
+ 
+}
 
-  @media (max-width: 768px) { /* Target screens smaller than 768px */
-    .heder {
-     border-radius: 16px !important;
-    }
+@media (max-width: 575px) {
+  .heder.col-12 {
+ 
+ border-radius: 20px !important;
   }
+ 
+}

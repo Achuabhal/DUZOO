@@ -196,7 +196,7 @@ const HiringPage: React.FC = () => {
       <FAQ />
     </div>
 
-      <div className="contact col-12 ">
+      <div className="contact5 ">
         <div className="site-map">
           <div className="mobile-logo">
             <img src={logo} alt="DUZO Logo" />
@@ -233,9 +233,9 @@ const HiringPage: React.FC = () => {
         </div>
       </div>
 
-      <footer className="footer">
+      <div className="footerinfo">
         <p>&copy; 2024 by DUZO</p>
-      </footer>
+      </div>
     </div>
   );
 };

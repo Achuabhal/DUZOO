@@ -326,7 +326,7 @@ color:#000;
   cursor: pointer;
 }
 
-footer {
+.footerinfo {
   background-color: #804d1a;
   text-align: center;
   padding: 30px 20px;
@@ -443,14 +443,14 @@ footer {
 }
 
 /* Footer Section */
-footer {
+.footerinfo {
   background-color: #813902;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-.footer-content {
+.footerinfo-content {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -458,7 +458,7 @@ footer {
   gap: 20px;
 }
 
-.footer-content div {
+.footerinfo-content div {
   text-align: left;
 }
 
@@ -474,15 +474,15 @@ footer {
   margin: 5px 0;
 }
 
-.contact-info div img {
+.contact5-info div img {
   width: 15vw;
 }
 
-.contact-info p svg {
+.contact5-info p svg {
   width: 2vw;
 }
 
-.contact-info .logo {
+.contact5-info .logo {
   font-size: 24px;
   font-weight: bold;
 }
@@ -513,11 +513,11 @@ footer {
 
 .app-download,
 .social-media,
-.contact-info {
+.contact5-info {
   text-align: center;
 }
 
-.contact {
+.contact5 {
   font-size: 2vw;
   font-weight: bold;
   display: flex;
@@ -670,9 +670,10 @@ footer {
     padding-bottom: 45px;
     margin-bottom: 15px;
   }
-  .contact {
+  .contact5 {
     display: block;
     margin-top: 10px;
+    margin-left: 20px;
   }
   .join-stepss {
     display: block;
@@ -755,10 +756,10 @@ footer {
   .app-download .social-media span svg {
     width: 10vw;
   }
-  .contact-info p {
+  .contact5-info p {
     font-size: 5vw;
   }
-  .contact-info p svg {
+  .contact5-info p svg {
     width: 5vw;
   }
 
@@ -766,7 +767,7 @@ footer {
   .icons .cart-icon,
   .icons label,
   .steps-description,
-  .contact-info .logo img {
+  .contact5-info .logo img {
     display: none;
   }
 
@@ -848,24 +849,7 @@ footer {
   }
 }
 
-@media (max-width: 620px){
-  .custom-contact.col-12 label
-  {
-    margin: 5px !important;
-  }
-}
 
-@media (max-width: 768px) { /* Target screens smaller than 768px */
-  .contact {
-    margin-left: 21px !important; /* Extra margin for mobile view */
-    width: 360px !important; /* Extra margin for mobile view */
-  }
-}
 
-@media (max-width: 768px) { /* Target screens smaller than 768px */
-  .footer {
-    width: 355px !important; /* Extra margin for mobile view */
 
-    margin-left: 23px;
-  }
-}
+
