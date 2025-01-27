@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import firebaseConfig from "../../helper/firebaseConfig";
+
 import "./css/chef.css";
 import { Link } from "react-router-dom";
 import c from "../images/Images for hiring page/Chef and cook/cook for month.png"
@@ -9,9 +7,7 @@ import c1 from "../images/Images for hiring page/Chef and cook/cook for one meal
 import c2 from "../images/Images for hiring page/Chef and cook/cook for party.png"
 
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+//
 
 // Example services data
 const services = [

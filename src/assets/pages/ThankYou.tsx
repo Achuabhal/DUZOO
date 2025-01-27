@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/form.css';
-import cover from '../images/cover2.jpg';
+
 import logo from "../images/duzo.png";
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";

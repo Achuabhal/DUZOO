@@ -3,7 +3,7 @@ import styles from './css/SlotConfirmation.module.css'; // Import the module CSS
 import { Link } from 'react-router-dom';
 
 const SlotConfirmation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, ] = useState(true);
 
   
 
