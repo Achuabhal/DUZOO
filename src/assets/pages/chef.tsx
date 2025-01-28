@@ -8,7 +8,6 @@ import c2 from "../images/Images for hiring page/Chef and cook/cook for party.pn
 
 
 //
-
 // Example services data
 const services = [
   {
@@ -51,6 +50,11 @@ const App: React.FC = () => {
     console.log("Proceed to apply clicked");
   };
 
+  const selectedServiceNames = Array.from(selectedServices)
+    .map(id => services.find(service => service.id === id)?.name)
+    .filter(name => name)
+    .join(', ');
+
   return (
     <div className="container">
       <div className="header">
@@ -81,7 +85,7 @@ const App: React.FC = () => {
         ))}
       </div>
       <p className="service-count">
-        Services selected: <span id="selectedCount">{selectedServices.size}</span>
+        Selected Services: <span id="selectedServices">{selectedServiceNames}</span>
       </p>
       <Link to="/Form">
         <button id="proceedButton" className="proceed-button" onClick={handleProceed}>

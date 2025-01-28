@@ -568,7 +568,7 @@ color:#000;
 }
 
 /* Mobile View */
-@media (max-width: 620px) {
+@media (max-width:575px) {
   .allu{
     padding: 0px 20px !important; 
     margin:12px;
@@ -615,7 +615,7 @@ color:#000;
     
   }
 
-  .expertise-card button.apply-btn12 {
+  .expertise-card button.apply-btn12.col-12 {
     margin-top: 20px;
   }
   .expertise-block {

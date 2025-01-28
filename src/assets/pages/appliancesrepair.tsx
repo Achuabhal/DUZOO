@@ -13,18 +13,13 @@ import im10 from "../images/Images for hiring page/Appliances repair/refrigrator
 import im11 from "../images/Images for hiring page/Appliances repair/smart-tv.png";
 import im12 from "../images/Images for hiring page/Appliances repair/stove (1).png";
 
-
-
-
 const AutomobileCleaning: React.FC = () => {
   const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]);
 
   const handleServiceClick = (serviceId: number) => {
     if (selectedServiceIds.includes(serviceId)) {
-      // Deselect the service if it is already selected
       setSelectedServiceIds(prevIds => prevIds.filter(id => id !== serviceId));
     } else {
-      // Select the service
       setSelectedServiceIds(prevIds => [...prevIds, serviceId]);
     }
   };
@@ -48,7 +43,8 @@ const AutomobileCleaning: React.FC = () => {
     { id: 12, name: 'Water Boiler', img: im3 },
     { id: 13, name: 'Water Filter', img: im3 },
   ];
-  
+
+  const selectedServices = services.filter(service => selectedServiceIds.includes(service.id));
 
   return (
     <div className="hi">
@@ -75,8 +71,8 @@ const AutomobileCleaning: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="service-count">
-          Service selected: <span id="selectedCount">{selectedServiceIds.length}</span>
+        <p className="service-selected">
+          Selected Services: {selectedServices.map(s => s.name).join(', ') || 'None'}
         </p>
         <Link to="/Form" className="action">
           <button

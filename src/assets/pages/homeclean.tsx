@@ -8,7 +8,6 @@ import w from "../images/Images for hiring page/Home cleaning/water-closet.png"
 import so from "../images/Images for hiring page/Home cleaning/sofa.png"
 import f from "../images/Images for hiring page/Home cleaning/cleaning.png"
 
-
 interface Service {
   id: number;
   name: string;
@@ -17,7 +16,6 @@ interface Service {
 }
 
 const HomeCleaning: React.FC = () => {
-  const [selectedCount, setSelectedCount] = useState<number>(0);
   const [selectedServices, setSelectedServices] = useState<Set<number>>(
     new Set()
   );
@@ -39,27 +37,29 @@ const HomeCleaning: React.FC = () => {
       updatedServices.add(id);
     }
     setSelectedServices(updatedServices);
-    setSelectedCount(updatedServices.size);
   };
 
   const handleClose = () => {
-    // Add logic to handle close button action
     console.log("Close button clicked");
   };
 
   const handleProceed = () => {
-    // Add logic to handle proceed button action
     console.log("Proceed to apply clicked");
   };
+
+  const selectedServiceNames = Array.from(selectedServices)
+    .map(id => services.find(service => service.id === id)?.name)
+    .filter(name => name)
+    .join(', ');
 
   return (
     <div className="container" style={{ width: "100%" }}>
       <div className="header">
         <h1>Home Cleaning</h1>
         <Link to="/homepage">
-        <button id="closeButton" className="close-button" onClick={handleClose}>
-          ✕
-        </button>
+          <button id="closeButton" className="close-button" onClick={handleClose}>
+            ✕
+          </button>
         </Link>
       </div>
       <p className="subheader">Select your expertise</p>
@@ -77,15 +77,13 @@ const HomeCleaning: React.FC = () => {
           </div>
         ))}
       </div>
-      <p className="service-count">
-        Service selected : <span id="selectedCount">{selectedCount}</span>
+      <p className="service-selected">
+        Services selected: {selectedServiceNames || "None"}
       </p>
       <Link to="/form" className="action">
-                 
-               
-      <button id="proceedButton" className="proceed-button" onClick={handleProceed}>
-        Proceed to apply
-      </button>
+        <button id="proceedButton" className="proceed-button" onClick={handleProceed}>
+          Proceed to apply
+        </button>
       </Link>
     </div>
   );

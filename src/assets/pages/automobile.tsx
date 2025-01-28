@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 import bike from "../images/Images for hiring page/Automobile service/bike.png";
 import car from "../images/Images for hiring page/Automobile service/car-service.png";
 
+const serviceOptions: { [key: number]: string } = {
+  1: 'Car Cleaning',
+  2: 'Bike Cleaning',
+};
+
 const AutomobileCleaning: React.FC = () => {
-  const [selectedCount, setSelectedCount] = useState<number>(0);
   const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]); // Store selected service IDs
 
   const handleServiceClick = (serviceId: number) => {
     if (selectedServiceIds.includes(serviceId)) {
-      // If the service is already selected, deselect it
       setSelectedServiceIds(prevIds => prevIds.filter(id => id !== serviceId));
-      setSelectedCount(prevCount => prevCount - 1);
-    } else if (selectedCount < 2) {
-      // If the service isn't selected and there are fewer than 2 selected services, select it
+    } else if (selectedServiceIds.length < 2) {
       setSelectedServiceIds(prevIds => [...prevIds, serviceId]);
-      setSelectedCount(prevCount => prevCount + 1);
     }
   };
 
@@ -24,14 +24,16 @@ const AutomobileCleaning: React.FC = () => {
     // Handle the close button functionality here, if required
   };
 
+  const selectedServices = selectedServiceIds.map(id => serviceOptions[id]).join(', ');
+
   return (
     <div className="container">
       <div className="header">
         <h1>Automobile Cleaning</h1>
         <Link to="/homepage">
-        <button id="closeButton" className="close-button" onClick={handleCloseButtonClick}>
-          ✕
-        </button>
+          <button id="closeButton" className="close-button" onClick={handleCloseButtonClick}>
+            ✕
+          </button>
         </Link>
       </div>
       <p className="subheader">Select your expertise</p>
@@ -58,14 +60,12 @@ const AutomobileCleaning: React.FC = () => {
         </div>
       </div>
       <p className="service-count">
-        Service selected: <span id="selectedCount">{selectedCount}</span>
+        Services selected: {selectedServices || 'None'}
       </p>
       <Link to="/Form" className="action">
-                  
-                 
-      <button id="proceedButton" className="proceed-button">
-        Proceed to apply
-      </button>
+        <button id="proceedButton" className="proceed-button">
+          Proceed to apply
+        </button>
       </Link> 
     </div>
   );

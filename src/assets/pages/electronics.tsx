@@ -7,7 +7,6 @@ import e2 from "../images/Images for hiring page/Electrician,plumber and carpent
 
 
 const App: React.FC = () => {
-  const [selectedCount, setSelectedCount] = useState<number>(0);
   const [selectedServices, setSelectedServices] = useState<Set<number>>(
     new Set()
   );
@@ -26,7 +25,6 @@ const App: React.FC = () => {
       newSelectedServices.add(id);
     }
     setSelectedServices(newSelectedServices);
-    setSelectedCount(newSelectedServices.size);
   };
 
   const handleClose = () => {
@@ -34,17 +32,22 @@ const App: React.FC = () => {
   };
 
   const handleProceed = () => {
-    alert(`Proceeding with ${selectedCount} selected service(s).`);
+    alert(`Proceeding with ${selectedServices.size} selected service(s).`);
   };
+
+  const selectedServiceNames = services
+    .filter(service => selectedServices.has(service.id))
+    .map(service => service.name)
+    .join(", ");
 
   return (
     <div className="container">
       <div className="header">
         <h1>Electrician, Plumber and Carpenter</h1>
         <Link to="/homepage">
-        <button id="closeButton" className="close-button" onClick={handleClose}>
-          ✕
-        </button>
+          <button id="closeButton" className="close-button" onClick={handleClose}>
+            ✕
+          </button>
         </Link>
       </div>
       <p className="subheader">Select your expertise</p>
@@ -64,18 +67,18 @@ const App: React.FC = () => {
           </div>
         ))}
       </div>
-      <p className="service-count">
-        Service selected : <span id="selectedCount">{selectedCount}</span>
+      <p className="service-selected">
+        Selected Services: <span id="selectedServices">{selectedServiceNames || "None"}</span>
       </p>
       <Link to="/Form" >
-      <button
-        id="proceedButton"
-        className="proceed-button"
-        onClick={handleProceed}
-        disabled={selectedCount === 0}
-      >
-        Proceed to apply
-      </button>
+        <button
+          id="proceedButton"
+          className="proceed-button"
+          onClick={handleProceed}
+          disabled={selectedServices.size === 0}
+        >
+          Proceed to apply
+        </button>
       </Link>
     </div>
   );
