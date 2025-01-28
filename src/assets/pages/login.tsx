@@ -1,17 +1,36 @@
 import { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/duzo.png';
 
 export default function Component() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState('');
+  const [step, setStep] = useState<'phone' | 'otp'>('phone');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  // Corrected type for event
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handlePhoneSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Phone:', phoneNumber, 'OTP:', otp);
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      setError('Enter a valid 10-digit phone number.');
+    } else {
+      setError('');
+      // Simulate OTP request
+      console.log('Requesting OTP for:', phoneNumber);
+      setStep('otp');
+    }
+  };
+
+  const handleOtpSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (otp === '123456') { // Simulate OTP verification
+      navigate('/LOC');
+    } else {
+      setError('Invalid OTP.');
+    }
   };
 
   return (
@@ -28,37 +47,62 @@ export default function Component() {
         <div style={{ width: '100%', maxWidth: '400px', padding: '0 15px' }}>
           <h2 className="text-center mb-4" style={{ fontSize: '1.5rem' }}>Login</h2>
           
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Enter Phone Number</Form.Label>
-              <Form.Control
-                type="tel"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                style={{
-                  border: '1px solid #DDD',
-                  borderRadius: '20px',
-                  padding: '0.5rem'
-                }}
-              />
-            </Form.Group>
+          {error && <Alert variant="danger">{error}</Alert>}
+          
+          {step === 'phone' && (
+            <Form onSubmit={handlePhoneSubmit}>
+              <Form.Group className="mb-3">
+                <Form.Label>Enter Phone Number</Form.Label>
+                <Form.Control
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  style={{
+                    border: '1px solid #DDD',
+                    borderRadius: '20px',
+                    padding: '0.5rem'
+                  }}
+                  placeholder="10-digit number"
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group className="mb-4">
-              <Form.Label>Enter OTP</Form.Label>
-              <Form.Control
-                type="text"
-                value={otp}
-                onChange={(e) => setOtp(e.target.value)}
-                style={{
-                  border: '1px solid #DDD',
-                  borderRadius: '20px',
-                  padding: '0.5rem'
-                }}
-              />
-            </Form.Group>
+              <div className="text-center">
+                <Button 
+                  type="submit"
+                  className="w-50"
+                  style={{
+                    backgroundColor: '#000',
+                    border: 'none',
+                    borderRadius: '20px',
+                    padding: '0.5rem',
+                    fontSize: '1rem',
+                  }}
+                >
+                  Request OTP
+                </Button>
+              </div>
+            </Form>
+          )}
 
-            <Link to="/LOC" className="action">
-              <div style={{ marginLeft: '124px' }}>
+          {step === 'otp' && (
+            <Form onSubmit={handleOtpSubmit}>
+              <Form.Group className="mb-4">
+                <Form.Label>Enter OTP</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  style={{
+                    border: '1px solid #DDD',
+                    borderRadius: '20px',
+                    padding: '0.5rem'
+                  }}
+                  required
+                />
+              </Form.Group>
+
+              <div className="text-center">
                 <Button 
                   type="submit"
                   className="w-50"
@@ -73,8 +117,8 @@ export default function Component() {
                   Submit
                 </Button>
               </div>
-            </Link>
-          </Form>
+            </Form>
+          )}
         </div>
       </div>
     </Container>
