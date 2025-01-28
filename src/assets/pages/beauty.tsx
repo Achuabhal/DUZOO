@@ -8,7 +8,8 @@ import sw3 from "../images/Images for hiring page/Saloon/massage for men.png";
 
 const BeautySalon: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<Set<number>>(new Set());
-
+  
+ 
   const services = [
     { id: 1, image: sw, name: "Salon for women" },
     { id: 2, image: sw1, name: "Spa for women" },
@@ -16,6 +17,10 @@ const BeautySalon: React.FC = () => {
     { id: 4, image: sw3, name: "Massage for men" },
   ];
 
+  const data1 = services
+  .filter(service => selectedServices.has(service.id))
+  .map(service => service.name);
+console.log(data1);
   const toggleServiceSelection = (id: number) => {
     const updatedServices = new Set(selectedServices);
     if (updatedServices.has(id)) {
@@ -41,6 +46,8 @@ const BeautySalon: React.FC = () => {
       alert("Please select at least one service before proceeding.");
     }
   };
+
+
 
   return (
     <div className="container">
@@ -73,7 +80,7 @@ const BeautySalon: React.FC = () => {
           .filter(name => name)
           .join(", ")}
       </p>
-      <Link to="/Form">
+      <Link to="/Form"  state={{ data1}} >
         <button id="proceedButton" className="proceed-button" onClick={proceedHandler}>
           Proceed to apply
         </button>

@@ -28,6 +28,9 @@ const AutomobileCleaning: React.FC = () => {
     // Handle close button action
   };
 
+
+
+
   const services = [
     { id: 1, name: 'Air Condition', img: im1 },
     { id: 2, name: 'Connection', img: im3 },
@@ -45,7 +48,9 @@ const AutomobileCleaning: React.FC = () => {
   ];
 
   const selectedServices = services.filter(service => selectedServiceIds.includes(service.id));
+  const data = Array.from(new Set(selectedServices.map(service => service.name)));
 
+console.log(selectedServices.map(service => service.name));
   return (
     <div className="hi">
       <div className="container">
@@ -74,7 +79,7 @@ const AutomobileCleaning: React.FC = () => {
         <p className="service-selected">
           Selected Services: {selectedServices.map(s => s.name).join(', ') || 'None'}
         </p>
-        <Link to="/Form" className="action">
+        <Link to="/Form" className="action"  state={{ data }}>
           <button
             id="proceedButton"
             className="proceed-button"

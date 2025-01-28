@@ -8,6 +8,7 @@ const EligibilityForm: React.FC = () => {
   const [isAdult, setIsAdult] = useState(false);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -55,7 +56,7 @@ const EligibilityForm: React.FC = () => {
           />
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link to="/login" className="action">
+          <Link to="/login" state={{ dob }}  className="action ">
             <button 
               style={{ 
                 background: isAdult ? '#333333' : '#999999', 

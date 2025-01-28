@@ -1,10 +1,16 @@
 import { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useLocation } from 'react-router-dom';
 import logo from '../images/duzo.png';
 
 export default function Component() {
+
+  const location = useLocation();
+  const { dob } = location.state || {};
+  console.log(dob);
+  // Access the `state` object and extract `dob`
+ 
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState('');
   const [step, setStep] = useState<'phone' | 'otp'>('phone');
@@ -43,7 +49,6 @@ export default function Component() {
             style={{ width: '162px', height: '105px' }} 
           />
         </div>
-
         <div style={{ width: '100%', maxWidth: '400px', padding: '0 15px' }}>
           <h2 className="text-center mb-4" style={{ fontSize: '1.5rem' }}>Login</h2>
           
@@ -80,6 +85,7 @@ export default function Component() {
                   }}
                 >
                   Request OTP
+                  
                 </Button>
               </div>
             </Form>

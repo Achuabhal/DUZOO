@@ -26,6 +26,9 @@ const AutomobileCleaning: React.FC = () => {
 
   const selectedServices = selectedServiceIds.map(id => serviceOptions[id]).join(', ');
 
+  const data4 = selectedServices;
+
+  
   return (
     <div className="container">
       <div className="header">
@@ -62,7 +65,7 @@ const AutomobileCleaning: React.FC = () => {
       <p className="service-count">
         Services selected: {selectedServices || 'None'}
       </p>
-      <Link to="/Form" className="action">
+      <Link to="/Form" className="action" state={{data4}}>
         <button id="proceedButton" className="proceed-button">
           Proceed to apply
         </button>

@@ -16,7 +16,9 @@ const App: React.FC = () => {
     { id: 2, name: "Plumber", image: e1 },
     { id: 3, name: "Carpenter", image: e2 },
   ];
-
+  const data3 = services
+  .filter(service => selectedServices.has(service.id))
+  .map(service => service.name);
   const toggleService = (id: number) => {
     const newSelectedServices = new Set(selectedServices);
     if (newSelectedServices.has(id)) {
@@ -70,7 +72,7 @@ const App: React.FC = () => {
       <p className="service-selected">
         Selected Services: <span id="selectedServices">{selectedServiceNames || "None"}</span>
       </p>
-      <Link to="/Form" >
+      <Link to="/Form" state={{data3}} >
         <button
           id="proceedButton"
           className="proceed-button"

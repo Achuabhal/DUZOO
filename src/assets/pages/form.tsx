@@ -3,7 +3,9 @@ import { useState, type ChangeEvent, type FormEvent } from "react"
 import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
-import { Link } from 'react-router-dom';
+import { Link ,useLocation } from 'react-router-dom';
+
+
 
 
 // Define types
@@ -43,6 +45,22 @@ const App: React.FC = () => {
     panFile: null,
     offlineTest: false,
   })
+
+  const location = useLocation();
+const { data } = location.state || {};
+console.log(data);
+const { data1 } = location.state || {};
+console.log(data1);
+const { data2 } = location.state || {};
+console.log(data2);
+const { data3 } = location.state || {};
+console.log(data3);
+const { data4 } = location.state || {};
+console.log(data4);
+const { data5 } = location.state || {};
+console.log(data5);
+
+
   const [formErrors, setFormErrors] = useState<FormErrors>({})
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {

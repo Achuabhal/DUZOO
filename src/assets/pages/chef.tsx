@@ -27,6 +27,7 @@ const services = [
   },
 ];
 
+
 const App: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<Set<string>>(new Set());
 
@@ -41,6 +42,10 @@ const App: React.FC = () => {
       return updatedSelected;
     });
   };
+
+  const data2 = services
+  .filter(service => selectedServices.has(service.id))
+  .map(service => service.name);
 
   const handleClose = () => {
     console.log("Close button clicked");
@@ -87,7 +92,7 @@ const App: React.FC = () => {
       <p className="service-count">
         Selected Services: <span id="selectedServices">{selectedServiceNames}</span>
       </p>
-      <Link to="/Form">
+      <Link to="/Form  " className="action" state={{ data2 }}>
         <button id="proceedButton" className="proceed-button" onClick={handleProceed}>
           Proceed to apply
         </button>

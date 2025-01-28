@@ -52,6 +52,10 @@ const HomeCleaning: React.FC = () => {
     .filter(name => name)
     .join(', ');
 
+
+    const data5 = services
+  .filter(service => selectedServices.has(service.id))
+  .map(service => service.name);
   return (
     <div className="container" style={{ width: "100%" }}>
       <div className="header">
@@ -80,7 +84,7 @@ const HomeCleaning: React.FC = () => {
       <p className="service-selected">
         Services selected: {selectedServiceNames || "None"}
       </p>
-      <Link to="/form" className="action">
+      <Link to="/form" className="action"  state={{data5}}>
         <button id="proceedButton" className="proceed-button" onClick={handleProceed}>
           Proceed to apply
         </button>
