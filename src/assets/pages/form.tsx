@@ -5,6 +5,7 @@ import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
 
+
 // Define types
 interface FormData {
   firstName: string
@@ -181,7 +182,10 @@ const App: React.FC = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
+  const allData = [data, data1, data2, data3, data4, data5];
 
+  // Filter only the available data
+  const availableData = allData.filter(value => value);
   return (
     <div>
       <header className="heder col-12 col-sm-6 col-md-12 col-lg-12" style={{ width: "98%" }}>
@@ -220,6 +224,11 @@ const App: React.FC = () => {
         <section className="banner" style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover" }}>
           <h1>Apply</h1>
           <p className="a1">Role Name &nbsp;&nbsp;&nbsp; Location</p>
+{availableData.length > 0 ? (
+  availableData.map((value, index) => (
+    <p key={index}>{value}<br /></p>
+  ))
+) : null}
         </section>
 
         <section className="application-form  p-4  rounded">
@@ -233,6 +242,7 @@ const App: React.FC = () => {
                 <div className="col-12 col-sm-6  col-md-4 col-lg-6 custom-first-name">
                   <label>*First Name</label>
                   <input
+                 
                     id="fname"
                     type="text"
                     name="firstName"
