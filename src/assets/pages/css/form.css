@@ -487,7 +487,8 @@ p.a4{
      ;  /* Force centering */
     }
     .custom-email-name label{
-      margin-right:64% !important;  /* Force the width to 80% */
+      margin-right:64% !important;
+        /* Force the width to 80% */
      ;  /* Force centering */
     }
   }
@@ -506,7 +507,7 @@ p.a4{
       margin-left: -87%;
     }
     .custom-city-name.col-12{
-      margin-top: 6%;
+      margin-top: 0%;
     }
   }
   @media (min-width: 1024px) and (min-width: 1440px) {
@@ -701,5 +702,11 @@ p.a4{
   .form-group input[type="checkbox"] {
     width: 14px;
     height: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-group label{
+    font-size: 2.8vw !important;
   }
 }

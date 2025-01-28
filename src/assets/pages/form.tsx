@@ -298,7 +298,7 @@ const App: React.FC = () => {
                   {formErrors.address && <div className="invalid-feedback">{formErrors.address}</div>}
                 </div>
               </div>
-              <div className="row">
+                <div className="row" style={{ marginTop: "20px" }}>
                 <div className="col-12 col-sm-6 col-lg-6 custom-city-name ">
                   <label style={{ marginLeft: "-85%" }}>*City</label>
                   <input
@@ -361,7 +361,7 @@ const App: React.FC = () => {
 
               <h3 style={{ marginTop: "5%" }}>Documentation</h3>
               <hr style={{ width: "70%" }} />
-              <div className="form-group">
+              <div className="form-group ">
                 <div className="row">
                   <div className="col-12 col-sm-12">
                     <label className="file-input-label" style={{ width: "100%" }}>
