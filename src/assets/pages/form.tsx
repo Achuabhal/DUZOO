@@ -272,7 +272,7 @@ console.log(data5);
                 </div>
               </div>
               <div className="row">
-                <div className="col-12 col-sm-6 col-lg-6 custom-email-name">
+                <div className="col-12 col-sm-12 col-lg-6 custom-email-name">
                   <label>*E-mail Address</label>
                   <input
                     id="mail"

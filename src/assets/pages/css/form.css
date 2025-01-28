@@ -137,7 +137,7 @@ p.a4{
   .application-form h3 {
     text-align: left;
     font-size: 2vw;
-   
+  font-weight: bold;
     color: #333;
     
   }
@@ -488,6 +488,7 @@ p.a4{
     }
     .custom-email-name label{
       margin-right:64% !important;
+       width: "22%";
         /* Force the width to 80% */
      ;  /* Force centering */
     }
@@ -690,6 +691,9 @@ p.a4{
  
 }
 
+
+
+
 @media (max-width: 575px) {
   .heder.col-12 {
  
@@ -708,5 +712,35 @@ p.a4{
 @media (max-width: 575px) {
   .form-group label{
     font-size: 2.8vw !important;
+  }
+}
+@media (max-width: 575px) {
+.form-group input[type="text"]{
+  font-size: 3.8vw !important;
+}
+}
+
+
+@media (max-width: 575px) {
+  .form-group input[type="email"]{
+    font-size: 3.8vw !important;
+  }
+}
+
+@media(max-width :575px){
+  .form-group input[type="tel"]{
+    font-size: 3.8vw !important;
+  }
+}
+
+@media(max-width :575px){
+  .application-form h3{
+    font-size: 3.8vw !important;
+  }
+}
+
+@media(max-width :575px){
+  .application-form h2{
+    font-size: 4.8vw !important;
   }
 }
