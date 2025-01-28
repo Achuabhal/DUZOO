@@ -88,7 +88,7 @@ const HiringPage: React.FC = () => {
                       <img src={img1} alt="Automobile Cleaning" className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Automobile Cleaning</p>
                       <Link to="/Atomobile" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn1 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ const HiringPage: React.FC = () => {
                       <img src={img3} alt="Home Cleaning" className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Home Cleaning</p>
                       <Link to="/homecleaning" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn12 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ const HiringPage: React.FC = () => {
                       <img src={img} alt="appliances Repair" className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Appliances Repair</p>
                       <Link to="/applicationrepair" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn12 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const HiringPage: React.FC = () => {
                       <img src={img2} alt="Chef Services" className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Chef Services</p>
                       <Link to="/chef" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn12 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ const HiringPage: React.FC = () => {
                       <img src={img4} alt="Beauty and Salon" className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Beauty and Salon</p>
                       <Link to="/beauty" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn12 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>
@@ -133,7 +133,7 @@ const HiringPage: React.FC = () => {
                       <img src={img5} alt="Electrician, Carpenter..." className="img-fluid" style={{ width: "150px", height: "150px" }} />
                       <p>Electrician, Carpenter...</p>
                       <Link to="/electronic" state={{ background: location }}>
-                        <button className="apply-btn">Apply Now</button>
+                        <button className="apply-btn1 col-12">Apply Now</button>
                       </Link>
                     </div>
                   </div>

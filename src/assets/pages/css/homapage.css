@@ -614,6 +614,10 @@ color:#000;
     font-size: 0.8rem;
     
   }
+
+  .expertise-card button.apply-btn12 {
+    margin-top: 20px;
+  }
   .expertise-block {
     padding: 0;
   }
@@ -848,7 +852,6 @@ color:#000;
     padding-right: 0;
   }
 }
-
 
 
 

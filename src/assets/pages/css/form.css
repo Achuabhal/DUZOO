@@ -122,7 +122,7 @@ p.a4{
     background-color: rgba(255, 190, 93, 1) !important;
     border-radius: 20px ;
     padding: 4vw 4vw;
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
   }
   
@@ -214,6 +214,7 @@ p.a4{
   .form-group input[type="checkbox"] {
     margin-right: auto;
     width: 2vw;
+    height: 30px;
     border-radius: 15px;
   }
   
@@ -696,3 +697,9 @@ p.a4{
  
 }
  
+@media (max-width: 575px) {
+  .form-group input[type="checkbox"] {
+    width: 14px;
+    height: 15px;
+  }
+}

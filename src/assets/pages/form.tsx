@@ -3,6 +3,7 @@ import { useState, type ChangeEvent, type FormEvent } from "react"
 import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
+import { Link } from 'react-router-dom';
 
 
 // Define types
@@ -406,9 +407,17 @@ const App: React.FC = () => {
 
                 <div className="row">
                   <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
-                    <button type="submit" className="btn btn-dark w-100" disabled={!isFormComplete()}>
-                      Submit
-                    </button>
+                    {isFormComplete() ? (
+                      <Link to="/you" className="action">
+                        <button type="submit" className="btn btn-dark w-100">
+                          Submit
+                        </button>
+                      </Link>
+                    ) : (
+                      <button type="submit" className="btn btn-dark w-100" disabled>
+                        Submit
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
