@@ -206,41 +206,7 @@ const HiringPage: React.FC = () => {
         <FAQ />
       </div>
 
-      <div className="contact5">
-        <div className="site-map">
-          <div className="mobile-logo">
-            <img src={logo} alt="DUZO Logo" />
-          </div>
-          <p>Site Map</p>
-          <a href="#">Services</a>
-          <a href="#">Hiring</a>
-          <a href="#">For Business</a>
-          <a href="#">About Us</a>
-        </div>
-
-        <div className="social-media-section">
-          <p>Follow Us On</p>
-          <div className="social-icons">
-            <a href="https://www.instagram.com/duzopartners.in">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.youtube.com/@Duzoindia">
-              <i className="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-        <div className="contact-info">
-          <div className="logo">
-            <img src={logo} alt="DUZO Logo" />
-          </div>
-          <p>+917709466592</p>
-          <p>duzo.services@gmail.com</p>
-        </div>
-      </div>
+      
 
       <div className="footerinfo">
         <p>&copy; 2024 by DUZO</p>

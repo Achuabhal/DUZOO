@@ -181,8 +181,7 @@ p.a4{
   }
   
   #add {
-    border-radius: 10vw;
-    border: none;
+   
     background-color: #ffedd6;
     height: 40%;
   }
@@ -588,7 +587,7 @@ p.a4{
     .custom-adress-name.col-lg-12 input {
       /* Your custom styles for laptop screens */
      margin-left: 0% !important;
-     width: 94% !important;
+     width: 49% !important;
      height: 65% !important;
       /* Add any other styles you need */
     }
@@ -694,6 +693,7 @@ p.a4{
 
 
 
+
 @media (max-width: 575px) {
   .heder.col-12 {
  
@@ -744,3 +744,17 @@ p.a4{
     font-size: 4.8vw !important;
   }
 }
+
+.invalid-feedbackk {
+  width: 89%;
+  color: var(--bs-form-invalid-color);
+  display: block;
+}
+@media(max-width :575px){
+  .invalid-feedbackk{
+    margin-left: 100px;
+  }
+}
+
+
+

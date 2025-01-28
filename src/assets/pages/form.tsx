@@ -1,12 +1,9 @@
 import type React from "react"
 import { useState, type ChangeEvent, type FormEvent } from "react"
+import { Link, useLocation } from "react-router-dom"
 import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
-import { Link ,useLocation } from 'react-router-dom';
-
-
-
 
 // Define types
 interface FormData {
@@ -46,20 +43,19 @@ const App: React.FC = () => {
     offlineTest: false,
   })
 
-  const location = useLocation();
-const { data } = location.state || {};
-console.log(data);
-const { data1 } = location.state || {};
-console.log(data1);
-const { data2 } = location.state || {};
-console.log(data2);
-const { data3 } = location.state || {};
-console.log(data3);
-const { data4 } = location.state || {};
-console.log(data4);
-const { data5 } = location.state || {};
-console.log(data5);
-
+  const location = useLocation()
+  const { data } = location.state || {}
+  console.log(data)
+  const { data1 } = location.state || {}
+  console.log(data1)
+  const { data2 } = location.state || {}
+  console.log(data2)
+  const { data3 } = location.state || {}
+  console.log(data3)
+  const { data4 } = location.state || {}
+  console.log(data4)
+  const { data5 } = location.state || {}
+  console.log(data5)
 
   const [formErrors, setFormErrors] = useState<FormErrors>({})
 
@@ -120,12 +116,6 @@ console.log(data5);
       case "pan":
         if (!value) error = "PAN number is required"
         break
-      case "aadharFile":
-        if (!e.target.files || e.target.files.length === 0) error = "Aadhar file is required"
-        break
-      case "panFile":
-        if (!e.target.files || e.target.files.length === 0) error = "PAN file is required"
-        break
       case "offlineTest":
         if (!value) error = "Please select this option"
         break
@@ -146,8 +136,6 @@ console.log(data5);
       !!formData.pincode &&
       !!formData.aadhar &&
       !!formData.pan &&
-      !!formData.aadharFile &&
-      !!formData.panFile &&
       formData.offlineTest
     )
   }
@@ -313,10 +301,10 @@ console.log(data5);
                     onBlur={handleBlur}
                     required
                   />
-                  {formErrors.address && <div className="invalid-feedback">{formErrors.address}</div>}
+                  {formErrors.address && <div className="invalid-feedbackk">{formErrors.address}</div>}
                 </div>
               </div>
-                <div className="row" style={{ marginTop: "20px" }}>
+              <div className="row" style={{ marginTop: "20px" }}>
                 <div className="col-12 col-sm-6 col-lg-6 custom-city-name ">
                   <label style={{ marginLeft: "-85%" }}>*City</label>
                   <input
@@ -377,66 +365,32 @@ console.log(data5);
                 </div>
               </div>
 
-              <h3 style={{ marginTop: "5%" }}>Documentation</h3>
-              <hr style={{ width: "70%" }} />
-              <div className="form-group ">
-                <div className="row">
-                  <div className="col-12 col-sm-12">
-                    <label className="file-input-label" style={{ width: "100%" }}>
-                      <p>*Upload Aadhar Card</p>
-                      <input
-                        type="file"
-                        name="aadharFile"
-                        onChange={handleChange}
-                        className={formErrors.aadharFile ? "is-invalid" : ""}
-                        required
-                      />
-                      <p className="upload-file">Upload file</p>
-                    </label>
-                    {formErrors.aadharFile && <div className="invalid-feedback">{formErrors.aadharFile}</div>}
-                  </div>
+                <div className="col-12 col-md-12" style={{ marginTop: "50px" }}>
+                <input
+                  type="checkbox"
+                  name="offlineTest"
+                  className={`form-check-input ${formErrors.offlineTest ? "is-invalid" : ""}`}
+                  checked={formData.offlineTest}
+                  onChange={handleChange}
+                />
+                <label style={{ marginLeft: '10px' }}>*Offline Test will be conducted based on your role.</label>
 
-                  <div className="col-12 col-sm-12">
-                    <label className="file-input-label" style={{ width: "100%" }}>
-                      <p>*Upload PAN Card</p>
-                      <input
-                        type="file"
-                        name="panFile"
-                        onChange={handleChange}
-                        className={formErrors.panFile ? "is-invalid" : ""}
-                        required
-                      />
-                      <p className="upload-file">Upload file</p>
-                    </label>
-                    {formErrors.panFile && <div className="invalid-feedback">{formErrors.panFile}</div>}
-                  </div>
-                  <div className="col-12 col-md-12  ">
-                    <input
-                      type="checkbox"
-                      name="offlineTest"
-                      className={`form-check-input ${formErrors.offlineTest ? "is-invalid" : ""}`}
-                      checked={formData.offlineTest}
-                      onChange={handleChange}
-                    />
-                    <label>*Offline Test will be conducted based on your role.</label>
-                    {formErrors.offlineTest && <div className="invalid-feedback">{formErrors.offlineTest}</div>}
-                  </div>
-                </div>
+                {formErrors.offlineTest && <div className="invalid-feedback">{formErrors.offlineTest}</div>}
+              </div>
 
-                <div className="row">
-                  <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
-                    {isFormComplete() ? (
-                      <Link to="/you" className="action">
-                        <button type="submit" className="btn btn-dark w-100">
-                          Submit
-                        </button>
-                      </Link>
-                    ) : (
-                      <button type="submit" className="btn btn-dark w-100" disabled>
+              <div className="row">
+                <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
+                  {isFormComplete() ? (
+                    <Link to="/you" className="action">
+                      <button type="submit" className="btn btn-dark w-100">
                         Submit
                       </button>
-                    )}
-                  </div>
+                    </Link>
+                  ) : (
+                    <button type="submit" className="btn btn-dark w-100" disabled>
+                      Submit
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
