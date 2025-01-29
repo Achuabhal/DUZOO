@@ -408,10 +408,10 @@ const App: React.FC = () => {
         </section>
       </main>
       <div className="faq-container2 col-12 col-sm-6 col-md-12 col-lg-12">
-        <h1 className="faq-title2">Frequently Asked Questions (FAQ'S)</h1>
+        <h1 className="faq-title2 col-12">Frequently Asked Questions (FAQ'S)</h1>
         {faqs.map((faq, index) => (
           <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleQuestion(index)} style={{ cursor: "pointer" }}>
+            <div className="faq-question  col-12" onClick={() => toggleQuestion(index)} style={{ cursor: "pointer" }}>
               <div
                 className="chevron"
                 style={{

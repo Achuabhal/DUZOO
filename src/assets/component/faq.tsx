@@ -38,11 +38,11 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="faq-container">
-      <h1 className="faq-title">Frequently Asked Questions (FAQ'S)</h1>
+      <h1 className="faq-title col-12" >Frequently Asked Questions (FAQ'S)</h1>
       {faqs.map((faq, index) => (
         <div key={index} className="faq-item">
           <div
-            className="faq-question"
+            className="faq-question col-12"
             onClick={() => toggleQuestion(index)}
             style={{ cursor: "pointer" }}
           >
