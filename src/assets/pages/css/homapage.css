@@ -38,7 +38,7 @@ header {
 .navbar nav a {
   font-size: 2vw;
   margin: 0 10px;
-  color: #333;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -382,7 +382,7 @@ color:#000;
 }
 
 .black-circle {
-  background-color: #333;
+  background-color: #000000;
 }
 
 .green-circle {
