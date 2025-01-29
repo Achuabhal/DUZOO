@@ -785,3 +785,10 @@ p.a4{
       font-size: 9px;
   }
 }
+
+@media(min-width :1024px){
+ 
+  .guva.col-lg-12{
+        font-size: 30px;
+    }
+  }

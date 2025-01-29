@@ -218,10 +218,10 @@ const App: React.FC = () => {
       <main>
         <section className="banner " style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover" }}>
           <h1>Apply</h1>
-          <p className="a1">Role Name &nbsp;&nbsp;&nbsp; Location</p>
+         
 {availableData.length > 0 ? (
   availableData.map((value, index) => (
-    <p className="guva col-12" key={index}>{value}<br /></p>
+    <p className="guva col-12 col-lg-12 " key={index}>{value}<br /></p>
   ))
 ) : null}
         </section>
