@@ -773,7 +773,7 @@ p.a4{
 
 @media(max-width :575px){
   .banner h1{
-      font-size: 1rem;
+      font-size: 25px;
       margin-bottom: 4px;
   }
 }

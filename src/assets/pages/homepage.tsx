@@ -83,7 +83,7 @@ const HiringPage: React.FC = () => {
                 <div className="expertise-grid">
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img1} alt="Automobile Cleaning" className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img1} alt="Automobile Cleaning" className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Automobile<br /> Cleaning</p>
                       <Link to="/Atomobile" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>
@@ -92,7 +92,7 @@ const HiringPage: React.FC = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img3} alt="Home Cleaning" className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img3} alt="Home Cleaning" className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Home <br />Cleaning</p>
                       <Link to="/homecleaning" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>
@@ -101,7 +101,7 @@ const HiringPage: React.FC = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img} alt="appliances Repair" className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img} alt="appliances Repair" className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Appliances <br />Repair</p>
                       <Link to="/applicationrepair" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>
@@ -110,7 +110,7 @@ const HiringPage: React.FC = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img2} alt="Chef Services" className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img2} alt="Chef Services" className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Chef <br />Services</p>
                       <Link to="/chef" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>
@@ -119,7 +119,7 @@ const HiringPage: React.FC = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img4} alt="Beauty and Salon" className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img4} alt="Beauty and Salon" className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Beauty<br /> and Salon</p>
                       <Link to="/beauty" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>
@@ -128,7 +128,7 @@ const HiringPage: React.FC = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-12 mb-4">
                     <div className="expertise-card" style={{ width: "100%", height: "100%" }}>
-                      <img src={img5} alt="Electrician, Carpenter..." className="img-fluid" style={{ width: "150px", height: "150px" }} />
+                      <img src={img5} alt="Electrician, Carpenter..." className="img-fluid col-12" style={{ width: "150px", height: "150px" }} />
                       <p>Electrician,<br /> Carpenter...</p>
                       <Link to="/electronic" state={{ background: location }}>
                         <button className="apply-btn12 col-12">Apply Now</button>

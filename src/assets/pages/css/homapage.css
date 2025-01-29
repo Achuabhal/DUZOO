@@ -858,3 +858,13 @@ color:#000;
 
 
 
+
+
+
+@media (max-width:575px ) {
+  
+.img-fluid.col-12{
+height:110px !important;
+}
+ 
+}
