@@ -44,16 +44,14 @@ const HiringPage: React.FC = () => {
                 <img src="../../images/location.png" alt="Location" />
               </button>
             </label>
-            <span className="lang-icon">
-              <img src="../../images/language.png" alt="Language" />
-            </span>
+            
             <span className="cart-icon">
               <img src="../../images/user.png" alt="User" />
             </span>
             <div className="dropdown">
               <div style={{ display: "none" }} className="dropdown-contents">
                 <a href="../Profile/profile.html">Profile</a>
-                <a href="#">Language</a>
+                
                 <a href="#">FAQ</a>
               </div>
             </div>

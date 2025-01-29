@@ -495,7 +495,7 @@ p.a4{
   @media (max-width: 575px) {
    
     .custom-email-name label{
-      margin-right:78% !important;  /* Force the width to 80% */
+      margin-right:70% !important;  /* Force the width to 80% */
      ;  /* Force centering */
     }
     
@@ -768,5 +768,20 @@ p.a4{
 @media(max-width :575px){
   .faq-question.col-12{
       font-size: 1rem;
+  }
+}
+
+@media(max-width :575px){
+  .banner h1{
+      font-size: 1rem;
+      margin-bottom: 4px;
+  }
+}
+
+
+@media(max-width :575px){
+ 
+.guva.col-12{
+      font-size: 9px;
   }
 }

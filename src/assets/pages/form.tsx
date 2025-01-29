@@ -195,12 +195,7 @@ const App: React.FC = () => {
             <a href="#">FAQ</a>
           </div>
           <div className="icons d-flex">
-            <span className="location d-flex align-items-center gap-1">
-              <img src="images/language_(1)[1].png" alt="Location Icon" className="img-fluid" /> Bangalore
-            </span>
-            <span className="language d-flex align-items-center gap-1">
-              <img src="images/language_(1)[1].png" alt="Language Icon" className="img-fluid" /> English
-            </span>
+          
             <span className="cart-icon">
               <img src="../../images/user.png" alt="User Icon" className="img-fluid" />
             </span>
@@ -221,12 +216,12 @@ const App: React.FC = () => {
       </header>
 
       <main>
-        <section className="banner" style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover" }}>
+        <section className="banner " style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover" }}>
           <h1>Apply</h1>
           <p className="a1">Role Name &nbsp;&nbsp;&nbsp; Location</p>
 {availableData.length > 0 ? (
   availableData.map((value, index) => (
-    <p key={index}>{value}<br /></p>
+    <p className="guva col-12" key={index}>{value}<br /></p>
   ))
 ) : null}
         </section>
