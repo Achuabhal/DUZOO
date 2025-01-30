@@ -745,13 +745,13 @@ p.a4{
   }
 }
 
-.invalid-feedbackk {
+#invalid-feedbackk {
   width: 89%;
   color: var(--bs-form-invalid-color);
   display: block;
 }
 @media(max-width :575px){
-  .invalid-feedbackk{
+  #invalid-feedbackk{
     margin-left: 100px;
   }
 }

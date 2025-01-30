@@ -4,8 +4,13 @@ import { Link, useLocation } from "react-router-dom"
 import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
-import { VscAccount } from "react-icons/vsc";
+import { VscAccount } from "react-icons/vsc"
 
+const addressFeedbackStyle = `
+  .address-feedback {
+    margin-left: -10px;
+  }
+`
 
 // Define types
 interface FormData {
@@ -183,12 +188,13 @@ const App: React.FC = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
-  const allData = [data, data1, data2, data3, data4, data5];
+  const allData = [data, data1, data2, data3, data4, data5]
 
   // Filter only the available data
-  const availableData = allData.filter(value => value);
+  const availableData = allData.filter((value) => value)
   return (
     <div>
+      <style>{addressFeedbackStyle}</style>
       <header className="heder col-12 col-sm-6 col-md-12 col-lg-12" style={{ width: "98%" }}>
         <div className="navbar d-flex justify-content-between align-items-center">
           <div className="logo d-flex align-items-center gap-3">
@@ -196,9 +202,11 @@ const App: React.FC = () => {
             <a href="#">FAQ</a>
           </div>
           <div className="icons d-flex">
-          
-            <span className="account-icon" style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <VscAccount style={{ width: '100%', height: '100%' }} />
+            <span
+              className="account-icon"
+              style={{ width: "60px", height: "60px", display: "flex", alignItems: "center", justifyContent: "center" }}
+            >
+              <VscAccount style={{ width: "100%", height: "100%" }} />
             </span>
             <div className="dropdown">
               {isDropdownOpen && (
@@ -219,12 +227,15 @@ const App: React.FC = () => {
       <main>
         <section className="banner " style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover" }}>
           <h1>Apply</h1>
-         
-{availableData.length > 0 ? (
-  availableData.map((value, index) => (
-    <p className="guva col-12 col-lg-12 " key={index}>{value}<br /></p>
-  ))
-) : null}
+
+          {availableData.length > 0
+            ? availableData.map((value, index) => (
+                <p className="guva col-12 col-lg-12 " key={index}>
+                  {value}
+                  <br />
+                </p>
+              ))
+            : null}
         </section>
 
         <section className="application-form  p-4  rounded">
@@ -238,7 +249,6 @@ const App: React.FC = () => {
                 <div className="col-12 col-sm-6  col-md-4 col-lg-6 custom-first-name">
                   <label>*First Name</label>
                   <input
-                 
                     id="fname"
                     type="text"
                     name="firstName"
@@ -307,7 +317,11 @@ const App: React.FC = () => {
                     onBlur={handleBlur}
                     required
                   />
-                  {formErrors.address && <div className="invalid-feedbackk">{formErrors.address}</div>}
+                  {formErrors.address && (
+                    <div className="invalid-feedback address-feedback" style={{ width: '34%', marginLeft: '192px' }}>
+                      {formErrors.address}
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="row" style={{ marginTop: "20px" }}>
@@ -371,7 +385,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-                <div className="col-12 col-md-12" style={{ marginTop: "50px" }}>
+              <div className="col-12 col-md-12" style={{ marginTop: "50px" }}>
                 <input
                   type="checkbox"
                   name="offlineTest"
@@ -379,7 +393,7 @@ const App: React.FC = () => {
                   checked={formData.offlineTest}
                   onChange={handleChange}
                 />
-                <label style={{ marginLeft: '10px' }}>*Offline Test will be conducted based on your role.</label>
+                <label style={{ marginLeft: "10px" }}>*Offline Test will be conducted based on your role.</label>
 
                 {formErrors.offlineTest && <div className="invalid-feedback">{formErrors.offlineTest}</div>}
               </div>
