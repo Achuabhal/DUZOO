@@ -318,7 +318,7 @@ const App: React.FC = () => {
                     required
                   />
                   {formErrors.address && (
-                    <div className="invalid-feedback  col-lg-12" style={{ width: '34%', marginLeft: '68px' }}>
+                    <div className="invalid-feedback  col-lg-12" style={{ width: '46%', marginLeft: '68px' }}>
                       {formErrors.address}
                     </div>
                   )}
