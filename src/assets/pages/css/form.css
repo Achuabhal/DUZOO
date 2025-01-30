@@ -457,6 +457,19 @@ p.a4{
      ;  /* Force centering */
     }
   }
+  @media (min-width: 992px) {
+    .custom-last-phone input {
+      width: 60% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+    .custom-last-phone label{
+      margin-right:63% !important;  /* Force the width to 80% */
+     ;  /* Force centering */
+    }
+  }
+
+
+ 
 
 
   @media (min-width: 992px) {
@@ -468,14 +481,30 @@ p.a4{
   }
   @media (max-width: 575px) {
     .custom-first-name.col-12 label,
-    .custom-last-name.col-12 label {
+    .custom-last-name.col-12 label
+    .custom-last-phone label {
       margin-left: -82%;
+    }
+  }
+    @media (max-width: 575px) {
+     
+      .custom-last-name.col-12 label
+      {
+        margin-left: -82% !important;    
+       }  
+    
+  }
+  @media (max-width: 575px) {
+    .custom-last-phone.col-12 label
+    {
+      margin-left: -76% !important;
     }
     
   }
   @media (max-width: 575px) {
     .custom-first-name.col-12 input,
-    .custom-last-name.col-12 input {
+    .custom-last-name.col-12 input
+    .custom-last-phone.col-12 input {
       width: 60% !important;
     }
     
@@ -495,7 +524,7 @@ p.a4{
   @media (max-width: 575px) {
    
     .custom-email-name label{
-      margin-right:70% !important;  /* Force the width to 80% */
+      margin-right:75% !important;  /* Force the width to 80% */
      ;  /* Force centering */
     }
     
@@ -504,7 +533,7 @@ p.a4{
   @media (max-width: 575px) {
     
     .custom-city-name.col-12 label {
-      margin-left: -87%;
+      margin-left: -88% !important;
     }
     .custom-city-name.col-12{
       margin-top: 0%;
@@ -512,14 +541,14 @@ p.a4{
   }
   @media (min-width: 1024px) and (min-width: 1440px) {
     .custom-city-name.col-lg-6 label {
-      margin-left: -87% !important;
+      margin-left: -80% !important;
     }
   }
   
   @media (max-width: 575px) {
     
     .custom-pincode-name.col-12 label {
-      margin-left: -86%;
+      margin-left: -81%;
     }
 
     @media (max-width: 575px) {
@@ -542,7 +571,7 @@ p.a4{
   }
   @media (max-width: 575px) {
     .custom-adu-name.col-12 label {
-      margin-left: -74%;
+      margin-left: -65%;
     }
   }
   
@@ -555,7 +584,7 @@ p.a4{
   }
   @media (max-width: 575px) {
     .custom-pan-name.col-12 label {
-      margin-left: -74%;
+      margin-left: -66%;
     }
     .custom-pan-name.col-12{
       margin-top: 0% !important;
@@ -593,7 +622,7 @@ p.a4{
     }
     .custom-adress-name.col-lg-12 label {
       /* Your custom styles for laptop screens */
-     margin-left: -90% !important;
+     margin-left: -88% !important;
      
       /* Add any other styles you need */
     }
@@ -696,8 +725,13 @@ p.a4{
 
 @media (max-width: 575px) {
   .heder.col-12 {
- 
- border-radius: 20px !important;
+      border-radius: 51px !important;
+      height: 81px !important;
+      padding: 2px 20px !important;
+  }
+
+  #footerinfo{
+margin:4px;
   }
  
 }
@@ -800,11 +834,16 @@ p.a4{
       }
     }
   
+   
 
 
 
-
-
+    @media(max-width :575px){
+ 
+      .check.col-12{
+             margin-top: 24px !important;
+        }
+      }
 
 
 

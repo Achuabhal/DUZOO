@@ -333,6 +333,7 @@ color:#000;
   color: #fff;
   margin: 20px;
   border-radius: 25px;
+  font-size: 2rem;
 }
 
 .join-steps {
@@ -573,7 +574,11 @@ color:#000;
 @media (max-width:575px) {
   .allu{
     padding: 0px 20px !important; 
-    margin:12px;
+    margin:6px;
+  }
+  .hiring-banner{
+    margin:6px;
+    height: 115px;
   }
   .logo img {
     width: 40vw;
@@ -585,11 +590,12 @@ color:#000;
     font-size: 7vw;
   }
   main .hiring-banner div .join-button {
-    padding: 5px 10px;
+    padding: 1px 10px;
     font-size: 4vw;
   }
   .expertise-section {
     padding: 10px;
+    margin:6px;
   }
   .expertise-card {
     margin-bottom: 20px;
@@ -779,12 +785,23 @@ color:#000;
 
   .how-it-works {
     padding: 20px 10px;
+    margin:6px;
   }
 
   .how-it-works h2 {
     font-size: 8vw;
   }
+  .faq-container {
+    margin: 6px !important;
+    width: 404px !important;
+  }
 
+  .footerinfo {
+    
+    margin:6px;
+    font-size: 20px;
+    height: 65px;
+  }
   .how-it-works-content {
     align-items: center;
     flex-direction: column;
@@ -808,7 +825,7 @@ color:#000;
   .join-steps {
     background-color: #ffbe5d;
     padding: 20px;
-    margin: 20px;
+    margin: 8px;
     border-radius: 15px;
   }
 
@@ -853,6 +870,8 @@ color:#000;
   .expertise-block .expertise-space {
     padding-right: 0;
   }
+  
+ 
 }
 
 

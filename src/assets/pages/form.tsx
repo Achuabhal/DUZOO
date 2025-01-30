@@ -290,7 +290,7 @@ const App: React.FC = () => {
                   />
                   {formErrors.email && <div className="invalid-feedback">{formErrors.email}</div>}
                 </div>
-                <div className="col-12 col-sm-6 custom-last-name">
+                <div className="col-12 col-sm-6 custom-last-phone">
                   <label>*Phone Number</label>
                   <input
                     id="num"
@@ -385,7 +385,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <div className="col-12 col-md-12" style={{ marginTop: "50px" }}>
+              <div className="check col-12 col-md-12" style={{ marginTop: "50px" }}>
                 <input
                   type="checkbox"
                   name="offlineTest"
@@ -487,10 +487,9 @@ const App: React.FC = () => {
           <button className="book-now-button">BOOK NOW</button>
         </div>
       </div>
-
-      <footer className="text-white text-center p-3" style={{ backgroundColor: "#813902", fontSize: "27px" }}>
+      <div className="footerinfo" id="footerinfo">
         <p>&copy; 2024 by DUZO</p>
-      </footer>
+      </div>
     </div>
   )
 }
