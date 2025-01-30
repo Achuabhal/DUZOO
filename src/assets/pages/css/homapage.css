@@ -868,3 +868,10 @@ height:110px !important;
 }
  
 }
+
+
+@media (max-width: 768px) {
+  .account-icon {
+    display: none !important;
+  }
+}

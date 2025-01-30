@@ -14,6 +14,7 @@ import img3 from "../images/Images for hiring page/mainhire/Hiring main page ima
 import img4 from "../images/Images for hiring page/mainhire/Hiring main page images/massage.png";
 import img5 from "../images/Images for hiring page/mainhire/Hiring main page images/repair-tools.png";
 import FAQ from "../component/faq";
+import { VscAccount } from "react-icons/vsc";
 
 const HiringPage: React.FC = () => {
   const location = useLocation();
@@ -45,9 +46,9 @@ const HiringPage: React.FC = () => {
               </button>
             </label>
             
-            <span className="cart-icon">
-              <img src="../../images/user.png" alt="User" />
-            </span>
+            <span className="account-icon" style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <VscAccount style={{ width: '100%', height: '100%' }} />
+                        </span>
             <div className="dropdown">
               <div style={{ display: "none" }} className="dropdown-contents">
                 <a href="../Profile/profile.html">Profile</a>

@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom"
 import "./css/form.css"
 import cover from "../images/cover2.jpg"
 import logo from "../images/duzo.png"
+import { VscAccount } from "react-icons/vsc";
 
 
 // Define types
@@ -196,8 +197,8 @@ const App: React.FC = () => {
           </div>
           <div className="icons d-flex">
           
-            <span className="cart-icon">
-              <img src="../../images/user.png" alt="User Icon" className="img-fluid" />
+            <span className="account-icon" style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <VscAccount style={{ width: '100%', height: '100%' }} />
             </span>
             <div className="dropdown">
               {isDropdownOpen && (
