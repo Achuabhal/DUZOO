@@ -12,6 +12,8 @@ import im9 from "../images/Images for hiring page/Appliances repair/oven.png";
 import im10 from "../images/Images for hiring page/Appliances repair/refrigrator.png";
 import im11 from "../images/Images for hiring page/Appliances repair/smart-tv.png";
 import im12 from "../images/Images for hiring page/Appliances repair/stove (1).png";
+import im13 from "../images/Images for hiring page/Appliances repair/water-boiler.png";
+import im14 from "../images/Images for hiring page/Appliances repair/water-filter.png";
 
 const AutomobileCleaning: React.FC = () => {
   const [selectedServiceIds, setSelectedServiceIds] = useState<number[]>([]);
@@ -43,8 +45,8 @@ const AutomobileCleaning: React.FC = () => {
     { id: 9, name: 'Smart TV', img: im11 },
     { id: 10, name: 'Stove', img: im12 },
     { id: 11, name: 'Iron repair', img: im2 },
-    { id: 12, name: 'Water Boiler', img: im3 },
-    { id: 13, name: 'Water Filter', img: im3 },
+    { id: 12, name: 'Water Boiler', img: im13 },
+    { id: 13, name: 'Water Filter', img: im14 },
   ];
 
   const selectedServices = services.filter(service => selectedServiceIds.includes(service.id));
