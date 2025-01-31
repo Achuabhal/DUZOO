@@ -571,7 +571,7 @@ color:#000;
 }
 
 /* Mobile View */
-@media (max-width:575px) {
+@media (max-width:620px) {
   .allu{
     padding: 0px 20px !important; 
     margin:6px;
