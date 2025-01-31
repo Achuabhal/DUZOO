@@ -188,19 +188,7 @@ const HiringPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="how-it-works" id="how-it-works">
-        <h2>How It Works</h2>
-        <div className="how-it-works-content">
-          <div className="steps-description">
-            <p>Download The App</p>
-            <div className="arrow">↓</div>
-            <p>Work At Your Convenient Time</p>
-            <div className="arrow">↓</div>
-            <p>Earn</p>
-          </div>
-          <div className="app-image-placeholder"></div>
-        </div>
-      </section>
+      
       <div>
         <FAQ />
       </div>
