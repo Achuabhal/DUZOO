@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/thank.css';
-
+import { VscAccount } from "react-icons/vsc";
 import logo from "../images/duzo.png";
 import { Link, useLocation } from 'react-router-dom';
 
@@ -21,15 +21,11 @@ const App: React.FC = () => {
             <a href="#">FAQ</a>
           </div>
           <div className="icons d-flex">
-            <span className="location d-flex align-items-center gap-1">
-              <img src="images/language_(1)[1].png" alt="Location Icon" className="img-fluid" /> Bangalore
-            </span>
-            <span className="language d-flex align-items-center gap-1">
-              <img src="images/language_(1)[1].png" alt="Language Icon" className="img-fluid" /> English
-            </span>
-            <span className="cart-icon">
-              <img src="../../images/user.png" alt="User Icon" className="img-fluid" />
-            </span>
+            
+            
+              <span className="account-icon" style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                      <VscAccount style={{ width: '100%', height: '100%' }} />
+                                    </span>
             <div className="dropdown">
               <button className="dropbtn" onClick={toggleDropdown}>☰</button>
               {isDropdownOpen && (
