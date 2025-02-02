@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './css/form.css';
+import './css/thank.css';
 
 import logo from "../images/duzo.png";
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from "framer-motion";
 
 const App: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,33 +12,10 @@ const App: React.FC = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Dropdown animation variants
-  const dropdownVariants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, y: -10, transition: { duration: 0.2 } }
-  };
-
-  // Section animation variants
-  const sectionVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
-  };
-
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       <header className="p-3">
-        <motion.div 
-          className="navbar d-flex justify-content-between align-items-center"
-          initial="hidden"
-          animate="visible"
-          variants={sectionVariants}
-        >
+        <div className="navbar d-flex justify-content-between align-items-center">
           <div className="logo d-flex align-items-center gap-3">
             <img src={logo} alt="Logo" className="img-fluid" />
             <a href="#">FAQ</a>
@@ -56,39 +32,27 @@ const App: React.FC = () => {
             </span>
             <div className="dropdown">
               <button className="dropbtn" onClick={toggleDropdown}>☰</button>
-              <AnimatePresence>
-                {isDropdownOpen && (
-                  <motion.div
-                    className="dropdown-content"
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                  >
-                    <a href="../Profile/profile.html">Profile</a>
-                    <a href="#">Location</a>
-                    <a href="#">FAQ</a>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {isDropdownOpen && (
+                <div className="dropdown-content">
+                  <a href="../Profile/profile.html">Profile</a>
+                  <a href="#">Location</a>
+                  <a href="#">FAQ</a>
+                </div>
+              )}
             </div>
           </div>
-        </motion.div>
+        </div>
       </header>
 
-      <motion.div 
-        className="container-fluid"
+      <div 
+        className="container-fluid  contu"
         style={{
           backgroundColor: '#FFBE5D',
           borderRadius: '15px',
           padding: '100px',
           width: '98%',
           marginTop: '15px'
-        
         }}
-        initial="hidden"
-        animate="visible"
-        variants={sectionVariants}
       >
         <h2 className="text-center mb-4" style={{ fontFamily: 'cursive' }}>
           Thank you for Applying
@@ -130,13 +94,9 @@ const App: React.FC = () => {
               </div>
             </div>
             <Link to="/slot" state={{ background: location }} className="action">
-              <motion.button 
-                type="submit" 
-                className="btn btn-dark"
-                whileHover={{ scale: 1.1 }}
-              >
+              <button type="submit" className="btn btn-dark">
                 Submit
-              </motion.button>
+              </button>
             </Link>
           </div>
           <div className="col-md-6">
@@ -149,12 +109,12 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <footer className="text-white text-center p-3" style={{ backgroundColor: '#813902', fontSize: '27px' }}>
         <p>&copy; 2024 by DUZO</p>
       </footer>
-    </motion.div>
+    </div>
   );
 };
 
