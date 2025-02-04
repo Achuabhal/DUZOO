@@ -98,7 +98,10 @@ export default function Component() {
                 <Form.Control
                   type="text"
                   value={otp}
-                  onChange={(e) => setOtp(e.target.value)}
+                  onChange={(e) => {
+                    const numericValue = e.target.value.replace(/\D/g, '');
+                    setOtp(numericValue);
+                  }}
                   style={{
                     border: '1px solid #DDD',
                     borderRadius: '20px',
@@ -107,9 +110,8 @@ export default function Component() {
                   required
                 />
               </Form.Group>
-
               <div className="text-center">
-                <Button 
+                <Button
                   type="submit"
                   className="w-50"
                   style={{
@@ -117,7 +119,7 @@ export default function Component() {
                     border: 'none',
                     borderRadius: '20px',
                     padding: '0.5rem',
-                    fontSize: '1rem',
+                    fontSize: '1rem'
                   }}
                 >
                   Submit
@@ -125,6 +127,7 @@ export default function Component() {
               </div>
             </Form>
           )}
+
         </div>
       </div>
     </Container>
