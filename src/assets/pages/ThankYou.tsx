@@ -75,18 +75,7 @@ const App: React.FC = () => {
             <div className="mb-3">
               <label className="form-label">Timing <small>(Choose your slot)</small></label>
               <div>
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="timing" id="time1" />
-                  <label className="form-check-label" htmlFor="time1">3:00PM</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="timing" id="time2" />
-                  <label className="form-check-label" htmlFor="time2">3:00PM</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="timing" id="time3" />
-                  <label className="form-check-label" htmlFor="time3">3:00PM</label>
-                </div>
+                <input type="time" className="form-control" />
               </div>
             </div>
             <Link to="/slot" state={{ background: location }} className="action">
