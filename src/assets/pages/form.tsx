@@ -90,47 +90,59 @@ const App: React.FC = () => {
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    let error = ""
+    const { name, value } = e.target;
+    let error = "";
+  
     switch (name) {
       case "firstName":
-        if (!value) error = "First Name is required"
-        break
+        if (!value) error = "First Name is required";
+        break;
       case "lastName":
-        if (!value) error = "Last Name is required"
-        break
+        if (!value) error = "Last Name is required";
+        break;
       case "email":
-        if (!value) error = "Email is required"
-        else if (!/\S+@\S+\.\S+/.test(value)) error = "Invalid email format"
-        break
+        if (!value) error = "Email is required";
+        else if (!/\S+@\S+\.\S+/.test(value)) error = "Invalid email format";
+        break;
       case "phone":
-        if (!value) error = "Phone number is required"
-        else if (!/^\d{10}$/.test(value)) error = "Phone number must be exactly 10 digits"
-        break
+        if (!value) error = "Phone number is required";
+        else if (!/^\d{10}$/.test(value)) error = "Phone number must be exactly 10 digits";
+        break;
       case "address":
-        if (!value) error = "Address is required"
-        break
+        if (!value) error = "Address is required";
+        break;
       case "city":
-        if (!value) error = "City is required"
-        break
+        if (!value) error = "City is required";
+        break;
       case "pincode":
-        if (!value) error = "Pincode is required"
-        else if (!/^\d{6}$/.test(value)) error = "Pincode must be exactly 6 digits"
-        break
+        if (!value) error = "Pincode is required";
+        else if (!/^\d{6}$/.test(value)) error = "Pincode must be exactly 6 digits";
+        break;
       case "aadhar":
-        if (!value) error = "Aadhar number is required"
-        break
+        if (!value) error = "Aadhar number is required";
+        break;
       case "pan":
-        if (!value) error = "PAN number is required"
-        break
+        if (!value) error = "PAN number is required";
+        break;
       case "offlineTest":
-        if (!value) error = "Please select this option"
-        break
+        if (!value) error = "Please select this option";
+        break;
       default:
-        break
+        break;
     }
-    setFormErrors((prev) => ({ ...prev, [name]: error }))
-  }
+  
+    setFormErrors((prev) => ({ ...prev, [name]: error }));
+  };
+  
+  const handleClick = () => {
+    // Manually trigger validation for all fields
+    const inputElements = document.querySelectorAll("input, select");
+    inputElements.forEach((input) => {
+      handleBlur({ target: input } as React.FocusEvent<HTMLInputElement>);
+    });
+  
+    console.log("Submit button clicked!");
+  };
 
   const isFormComplete = (): boolean => {
     return (
@@ -402,12 +414,13 @@ const App: React.FC = () => {
                 <div className="col-12 col-sm-6 col-md-12 col-lg-12 custom-submit-name">
                   {isFormComplete() ? (
                     <Link to="/you" className="action">
-                      <button type="submit" className="btn btn-dark w-100">
+                      <button type="submit" className="btn btn-dark w-100" >
                         Submit
                       </button>
                     </Link>
                   ) : (
-                    <button type="submit" className="btn btn-dark w-100" disabled>
+                    <button type="submit" className="btn btn-dark w-100" onClick={handleClick}>
+
                       Submit
                     </button>
                   )}
