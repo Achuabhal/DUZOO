@@ -13,6 +13,7 @@ import img2 from "../images/Images for hiring page/mainhire/Hiring main page ima
 import img3 from "../images/Images for hiring page/mainhire/Hiring main page images/housekeeping.png";
 import img4 from "../images/Images for hiring page/mainhire/Hiring main page images/massage.png";
 import img5 from "../images/Images for hiring page/mainhire/Hiring main page images/repair-tools.png";
+import im from "../images/placeholder.png"
 import FAQ from "../component/faq";
 import { VscAccount } from "react-icons/vsc";
 
@@ -42,7 +43,7 @@ const HiringPage: React.FC = () => {
             <label>
               <input id="search" type="text" />
               <button className="location-icon">
-                <img src="../../images/location.png" alt="Location" />
+                <img src={im} alt="Location" />
               </button>
             </label>
             

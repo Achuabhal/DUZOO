@@ -116,8 +116,7 @@ header {
 
 .location-icon {
   width: 2.3vw;
-  position: relative;
-  left: -2.3vw;
+ 
   border: none;
   background-color: transparent;
 }

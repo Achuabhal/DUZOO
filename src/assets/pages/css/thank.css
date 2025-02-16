@@ -64,14 +64,23 @@ body {
     .contu{
     margin-top: 10px !important;
     }
+    #datepicker {
+      width: 94%  !important;
+    }
+    #google{
+      width: 94% !important;
+    }
+
      
     }
 
-    #datepicker{
+    
+
+    #google{
       width: 50%;
     }
 
 
-    #google{
+    #datepicker{
       width: 50%;
     }
